@@ -1,3 +1,21 @@
+import {
+  FaHtml5,
+  FaCss3,
+  FaJs,
+  FaReact,
+  SiNextdotjs,
+  SiFramer,
+  FaWordpress,
+  FaFigma,
+  SiAdobexd,
+  SiAdobephotoshop,
+  HiUser,
+  HiRectangleGroup,
+  HiViewColumns,
+  HiChatBubbleBottomCenterText,
+  HiEnvelope,
+} from "react-icons/hi2";
+
 //  data
 const aboutData = [
   {
