@@ -1,6 +1,4 @@
-// fonts
-import { Sora } from "@next/font/google";
-
+import { Sora } from "@next/font/google"; // fonts
 // components
 import Nav from "../components/Nav";
 import Header from "../components/Header";
