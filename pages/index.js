@@ -23,6 +23,13 @@ const Home = () => {
           <p className="max-w-sm xl:max-w-xl mx-auto xl:mx-0 mb-10 xl:mb-16">
             I am passionate about developing full-stack applications, front-end applications and designing UI/UX and have a good point of view on colors.
           </p>
+          {/* Button */}
+          <div className="flex justify-center xl:hidden relative">
+            <ProjectsBtn />
+          </div>
+          <div>
+            <ProjectsBtn />
+          </div>
         </div>
       </div>
     </div>
