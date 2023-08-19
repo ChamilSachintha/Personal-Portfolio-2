@@ -11,22 +11,22 @@ import {
 const Socials = () => {
   return (
     <div className="flex items-center gap-x-5 text-lg">
-      <Link href={""} className="hover:text-accent transition-all duration-300">
+      <Link href={"https://www.linkedin.com/in/chamilsachintha96/"} target="_blank" className="hover:text-accent transition-all duration-300">
         <RiLinkedinLine />
       </Link>
-      <Link href={""} className="hover:text-accent transition-all duration-300">
+      <Link href={"https://github.com/ChamilSachintha"} target="_blank" className="hover:text-accent transition-all duration-300">
         <RiGithubLine />
       </Link>
-      <Link href={""} className="hover:text-accent transition-all duration-300">
+      {/* <Link href={""} target="_blank" className="hover:text-accent transition-all duration-300">
         <RiBehanceLine />
-      </Link>
-      {/* <Link href={""} className="hover:text-accent transition-all duration-300">
+      </Link> */}
+      {/* <Link href={""} target="_blank" className="hover:text-accent transition-all duration-300">
       <RiYoutubeLine />
     </Link> */}
-      <Link href={""} className="hover:text-accent transition-all duration-300">
+      <Link href={"https://www.instagram.com/chamil_sachintha/"} target="_blank" className="hover:text-accent transition-all duration-300">
         <RiInstagramLine />
       </Link>
-      <Link href={""} className="hover:text-accent transition-all duration-300">
+      <Link href={"https://www.facebook.com/chamil.sachintha/"} target="_blank" className="hover:text-accent transition-all duration-300">
         <RiFacebookLine />
       </Link>
     </div>
