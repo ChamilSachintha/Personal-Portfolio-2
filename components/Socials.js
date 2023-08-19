@@ -5,17 +5,17 @@ import {
   RiFacebookLine,
   RiBehanceLine,
   RiGithubLine,
-  RiLinkedinLine
+  RiLinkedinLine,
 } from "react-icons/ri";
 
 const Socials = () => {
   return (
     <div className="flex items-center gap-x-5 text-lg">
       <Link href={""} className="hover:text-accent transition-all duration-300">
-        <RiGithubLine />
+        <RiLinkedinLine />
       </Link>
       <Link href={""} className="hover:text-accent transition-all duration-300">
-        <RiLinkedinLine />
+        <RiGithubLine />
       </Link>
       <Link href={""} className="hover:text-accent transition-all duration-300">
         <RiBehanceLine />
