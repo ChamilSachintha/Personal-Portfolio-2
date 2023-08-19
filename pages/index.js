@@ -18,11 +18,11 @@ const Home = () => {
             initial="hidden"
             animate="show"
             exit="hidden"
-            className="h1"
+            className="h1 text-[48px]"
           >
             Hi, I'm Chamil Sachintha <br />{" "}
             <span className="text-accent">
-              Full-Stack, Front-End & UI/UX Engineer
+              Full-Stack, Front-End & UI/UX <br />Engineer
             </span>
           </motion.h1>
           {/* Introduction */}
