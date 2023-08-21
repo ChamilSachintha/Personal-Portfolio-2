@@ -18,7 +18,7 @@ const Home = () => {
             initial="hidden"
             animate="show"
             exit="hidden"
-            className="h1 text-[48px]"
+            className="h1 text-[45px]"
           >
             Hi, I'm Chamil Sachintha <br />{" "}
             <span className="text-accent">
