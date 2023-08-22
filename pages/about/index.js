@@ -89,7 +89,7 @@ export const aboutData = [
       {
         title:
           "BSc (Hons) in Computer Engineering - Faculty of Engineering, University of Jaffna",
-        stage: "2018 – present",
+        stage: "",
       },
       {
         title: "G.C.E Advance Level Examination (2017)",
