@@ -7,12 +7,15 @@ import {
   FaReact,
   FaWordpress,
   FaFigma,
+  FaPhp,
 } from "react-icons/fa";
 import {
   SiNextdotjs,
-  SiFramer,
   SiAdobexd,
   SiAdobephotoshop,
+  SiMysql,
+  SiAdobepremierepro,
+  SiCanva,
 } from "react-icons/si";
 // Components
 import Avatar from "../../components/Avatar";
@@ -22,6 +25,8 @@ import { motion } from "framer-motion";
 import { fadeIn } from "../../variants";
 // Counter
 import CountUp from "react-countup";
+// ParticlesContainer
+import ParticlesContainer from "../../components/ParticlesContainer";
 
 //  Data
 export const aboutData = [
@@ -29,67 +34,70 @@ export const aboutData = [
     title: "skills",
     info: [
       {
-        title: "Web Development",
+        title: "Front-End Development",
         icons: [
           <FaHtml5 />,
           <FaCss3 />,
           <FaJs />,
           <FaReact />,
           <SiNextdotjs />,
-          <SiFramer />,
           <FaWordpress />,
         ],
       },
       {
-        title: "UI/UX Design",
-        icons: [<FaFigma />, <SiAdobexd />, <SiAdobephotoshop />],
+        title: "Back-End Development",
+        icons: [<FaPhp />, <SiMysql />],
+      },
+      {
+        title: "UI/UX Designing",
+        icons: [<FaFigma />, <SiAdobephotoshop />],
+      },
+      {
+        title: "Video Editing",
+        icons: [<SiAdobepremierepro />],
+      },
+      {
+        title: "Graphic Designing",
+        icons: [<SiAdobephotoshop />, <SiCanva />],
       },
     ],
   },
   {
-    title: "awards",
+    title: "work experience",
     info: [
       {
-        title: "Webby Awards - Honoree",
-        stage: "2011 - 2012",
+        title: "Web Editor (Part time) - Siyakma Academy",
+        stage: "FEB 2023 - Present",
       },
       {
-        title: "Adobe Design Achievement Awards - Finalist",
-        stage: "2009 - 2010",
+        title: "Intern Software Engineer - Fixellit (PVT) LTD",
+        stage: "FEB 2023 - JUL 2023",
+      },
+      {
+        title: "Video Editor - Fiverr (Freelance)",
+        stage: "APR 2020 - APR 2021",
+      },
+      {
+        title: "Trainee - People's Bank RHO Badulla",
+        stage: "DEC 2017 - APR 2018",
       },
     ],
   },
   {
-    title: "experience",
+    title: "education",
     info: [
       {
-        title: "UX/UI Designer - XYZ Company",
-        stage: "2012 - 2023",
+        title:
+          "BSc (Hons) in Computer Engineering - Faculty of Engineering, University of Jaffna",
+        stage: "2018 – present",
       },
       {
-        title: "Web Developer - ABC Agency",
-        stage: "2010 - 2012",
+        title: "G.C.E Advance Level Examination (2017)",
+        stage: "2As, 1B",
       },
       {
-        title: "Intern - DEF Corporation",
-        stage: "2008 - 2010",
-      },
-    ],
-  },
-  {
-    title: "credentials",
-    info: [
-      {
-        title: "Web Development - ABC University, LA, CA",
-        stage: "2011",
-      },
-      {
-        title: "Computer Science Diploma - AV Technical Institute",
-        stage: "2009",
-      },
-      {
-        title: "Certified Graphic Designer - ABC Institute, Los Angeles, CA",
-        stage: "2006",
+        title: "G.C.E Ordinary Level Examination (2012)",
+        stage: "7As, 2Bs",
       },
     ],
   },
@@ -101,6 +109,8 @@ const About = () => {
   return (
     <div className="h-full bg-primary/32 py-32 text-center xl:text-left">
       <Circles />
+      {/* Particles */}
+      {/* <ParticlesContainer /> */}
       {/* Avatar image */}
       <motion.div
         variants={fadeIn("right", 0.2)}
@@ -111,32 +121,85 @@ const About = () => {
       >
         <Avatar />
       </motion.div>
-      <div className="container mx-auto h-full flex flex-col items-center xl:flex-row gap-x-6">
+      <div className="container mx-auto flex flex-col items-center xl:flex-row gap-x-6">
         {/* Text */}
         <div className="flex-1 flex flex-col justify-center">
-          <h2 className="h2 text-[45px]">
-            Captivating <span className="text-accent">stories</span> birth magnificent designs.
-          </h2>
-          <p className="max-w-[500px] mx-auto xl:mx-0 mb-6 xl:mb-12 px-2 xl:px-0">
-            10 years ago, I began freelancing as a developer. Since then, I've
-            done remote work for agencies, consulted for startups, and
-            collaborated on digital products for business and consumer use.
-          </p>
+          <motion.h2
+            variants={fadeIn("right", 0.2)}
+            initial="hidden"
+            animate="show"
+            exit="hidden"
+            className="h2 text-[45px]"
+          >
+            I'm not perfect but I'm a{" "}
+            <span className="text-accent">Limited Edition</span>
+          </motion.h2>
+          <motion.p
+            variants={fadeIn("right", 0.4)}
+            initial="hidden"
+            animate="show"
+            exit="hidden"
+            className="max-w-[500px] mx-auto xl:mx-0 mb-6 xl:mb-12 px-2 xl:px-0 text-[14px]"
+          >
+            I'm Chamil, a tech enthusiast whose journey began three years ago
+            when I dived into freelancing as a video editor while simultaneously
+            pursuing a Computer Engineering degree. I had the privilege of
+            collaborating with clients worldwide, from the US, UK, Brazil,
+            Australia, Hong Kong, and Japan. <br /> I'm now deeply immersed in
+            the IT field, having completed a rewarding 6-month software
+            engineering internship at Fixellit (PVT) LTD and currently working
+            part-time as a Web Editor at Siyakma Academy. Passionate about
+            crafting seamless user experiences, I'm actively seeking job
+            opportunities in Full-stack, Front-end, and UI/UX Engineering to
+            continue my journey of innovation and growth.
+          </motion.p>
           {/* Counters */}
-          <div>
-            <div>
+          <motion.div
+            variants={fadeIn("right", 0.6)}
+            initial="hidden"
+            animate="show"
+            exit="hidden"
+            className="hidden md:flex md:max-w-xl xl:max-w-none mx-auto xl:mx-0 mb-8"
+          >
+            <div className="flex flex-1 xl:gap-x-6">
               {/* Experience */}
+              <div className="relative flex-1 after:w-[1px] after:h-full after:bg-white/10 after:absolute after:top-0 after:right-0">
+                <div className="text-2xl xl:text-4xl font-extrabold text-accent mb-2">
+                  <CountUp start={0} end={3} duration={5} /> +
+                </div>
+                <div className="text-xs uppercase tracking-[1px] loading-[1.4] max-w-[100px]">
+                  Years of experience
+                </div>
+              </div>
+              {/* Clients */}
               <div className="relative flex-1 after:w-[1px] after:h-full after:bg-white/10 after:absolute after:top-0 after:right-0">
                 <div className="text-2xl xl:text-4xl font-extrabold text-accent mb-2">
                   <CountUp start={0} end={10} duration={5} /> +
                 </div>
-                <div>Years of experience</div>
+                <div className="text-xs uppercase tracking-[1px] loading-[1.4] max-w-[100px]">
+                  Satisfied clients
+                </div>
+              </div>
+              {/* Projects */}
+              <div className="relative flex-1">
+                <div className="text-2xl xl:text-4xl font-extrabold text-accent mb-2">
+                  <CountUp start={0} end={40} duration={5} /> +
+                </div>
+                <div className="text-xs uppercase tracking-[1px] loading-[1.4] max-w-[100px]">
+                  Finished projects
+                </div>
               </div>
             </div>
-          </div>
+          </motion.div>
         </div>
         {/* Info */}
-        <div className="flex flex-col w-full xl:max-w-[48%] h-[480px]">
+        <motion.div
+          variants={fadeIn("left", 0.4)}
+          initial="hidden"
+          animate="show"
+          exit="hidden"
+          className="flex flex-col w-full xl:max-w-[48%] h-[530px]"
+        >
           <div className="flex gap-x-4 xl:gap-x-8 mx-auto xl:mx-0 mb-4">
             {aboutData.map((item, itemIndex) => {
               return (
@@ -174,7 +237,7 @@ const About = () => {
               );
             })}
           </div>
-        </div>
+        </motion.div>
       </div>
     </div>
   );
