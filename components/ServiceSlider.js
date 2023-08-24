@@ -7,14 +7,7 @@ import "swiper/css/free-mode";
 import "swiper/css/pagination";
 
 // Icons
-import {
-  RxCrop,
-  RxPencil2,
-  RxDesktop,
-  RxReader,
-  RxRocket,
-  RxArrowTopRight,
-} from "react-icons/rx";
+import { RxArrowTopRight, RxLayout, RxLayers, RxMix } from "react-icons/rx";
 
 // Required modules
 import { FreeMode, Pagination } from "swiper";
@@ -22,52 +15,45 @@ import { FreeMode, Pagination } from "swiper";
 // Service data
 const serviceData = [
   {
-    icon: <RxCrop />,
-    title: "Branding",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    icon: <RxLayers />,
+    title: "Full-Stack",
+    description:
+      "Crafting comprehensive solutions that seamlessly integrate front-end and back-end technologies for an end-to-end experience.",
   },
   {
-    icon: <RxPencil2 />,
-    title: "Design",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    icon: <RxLayout />,
+    title: "Front-End",
+    description:
+      "Transforming design concepts into interactive and user-friendly interfaces that captivate and engage users.",
   },
   {
-    icon: <RxDesktop />,
-    title: "Development",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-  },
-  {
-    icon: <RxReader />,
-    title: "Copywriting",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-  },
-  {
-    icon: <RxRocket />,
-    title: "SEO",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    icon: <RxMix />,
+    title: "UI / UX",
+    description:
+      "Elevating digital experiences through intuitive user interfaces and thoughtful user experiences that leave a lasting impact.",
   },
 ];
 
 const ServiceSlider = () => {
   return (
     <Swiper
-    breakpoints={{
-      320: {
-        slidesPerView: 1,
-        spaceBetween: 15,
-      },
+      breakpoints={{
+        320: {
+          slidesPerView: 1,
+          spaceBetween: 15,
+        },
 
-      640: {
-        slidesPerView: 3,
-        spaceBetween: 15,
-      },
-    }}
-    freeMode={true}
-    pagination={{
-      clickable: true,
-    }}
-    modules={{FreeMode, Pagination}}
-    className="h-[240px] sm:h-[340px]"
+        640: {
+          slidesPerView: 3,
+          spaceBetween: 15,
+        },
+      }}
+      freeMode={true}
+      pagination={{
+        clickable: true,
+      }}
+      modules={{ FreeMode, Pagination }}
+      className="h-[240px] sm:h-[340px]"
     >
       {serviceData.map((item, index) => {
         return (
@@ -78,15 +64,17 @@ const ServiceSlider = () => {
               {/* Title and description */}
               <div className="mb-8">
                 <div className="mb-2 text-lg">{item.title}</div>
-                <p>{item.description}</p>
+                <p className="max-w-[350px] leading-normal ">
+                  {item.description}
+                </p>
               </div>
               {/* Arrow */}
               <div className="text-3xl">
-                <RxArrowTopRight />
+                <RxArrowTopRight className="group-hover:rotate-45 group-hover:text-accent transition-all duration-300" />
               </div>
             </div>
           </SwiperSlide>
-        )
+        );
       })}
     </Swiper>
   );
