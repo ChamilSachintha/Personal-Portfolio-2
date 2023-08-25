@@ -22,7 +22,7 @@ const Services = () => {
               exit="hidden"
               className="h2 xl:mt-8 text-[45px]"
             >
-              My services <span className="text-accent">.</span>
+              My Services <span className="text-accent">.</span>
             </motion.h2>
             <motion.p
               variants={fadeIn("up", 0.4)}
@@ -31,7 +31,7 @@ const Services = () => {
               exit="hidden"
               className="mb-4 max-w-[300px] mx-auto lg:mx-0"
             >
-              When passion and skill work together, expect a masterpiece.
+            “ When passion and skill work together, expect a masterpiece. ”
             </motion.p>
           </div>
           {/* Slide r */}
