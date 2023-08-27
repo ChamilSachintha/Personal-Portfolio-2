@@ -112,7 +112,7 @@ const About = () => {
       {/* Particles */}
       {/* <ParticlesContainer /> */}
       {/* Avatar image */}
-      <motion.div
+      {/* <motion.div
         variants={fadeIn("right", 0.2)}
         initial="hidden"
         animate="show"
@@ -120,7 +120,7 @@ const About = () => {
         className="hidden xl:flex absolute bottom-0 -left-[370px]"
       >
         <Avatar />
-      </motion.div>
+      </motion.div> */}
       <div className="container mx-auto flex flex-col items-center xl:flex-row gap-x-6">
         {/* Text */}
         <div className="flex-1 flex flex-col justify-center">
