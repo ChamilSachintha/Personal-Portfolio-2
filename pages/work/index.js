@@ -20,7 +20,7 @@ const Project = () => {
               initial="hidden"
               animate="show"
               exit="hidden"
-              className="h2 xl:mt-8 text-[45px]"
+              className="h2 xl:mt-12 text-[45px]"
             >
               My Projects <span className="text-accent">.</span>
             </motion.h2>
@@ -35,7 +35,7 @@ const Project = () => {
               and challenges, and invent and reinvent. ”
             </motion.p>
           </div>
-          {/* Slide r */}
+          {/* Slider */}
           <motion.div
             variants={fadeIn("down", 0.6)}
             initial="hidden"
