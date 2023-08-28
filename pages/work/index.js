@@ -5,6 +5,8 @@ import ProjectSlider from "../../components/WorkSlider";
 import Bulb from "../../components/Bulb";
 import Circles from "../../components/Circles";
 
+import { RxLayout, RxLayers, RxMix } from "react-icons/rx";
+
 const Project = () => {
   const [activeTab, setActiveTab] = useState("front-end");
 
@@ -35,7 +37,7 @@ const Project = () => {
               and challenges, and invent and reinvent. ”
             </motion.p>
           </div>
-          
+
           {/* Slider */}
           <motion.div
             variants={fadeIn("down", 0.6)}
@@ -44,31 +46,33 @@ const Project = () => {
             exit="hidden"
             className="w-full xl:max-w-[65%] h-[500px]"
           >
-          {/* Tab navigation */}
-          <div className="flex justify-center space-x-10 w-full py-7">
-            <button
-              onClick={() => setActiveTab("front-end")}
-              className={`tab-btn ${
-                activeTab === "front-end" ? "active" : ""
-              }`}
-            >
-              Front-End
-            </button>
-            <button
-              onClick={() => setActiveTab("full-stack")}
-              className={`tab-btn ${
-                activeTab === "full-stack" ? "active" : ""
-              }`}
-            >
-              Full-Stack
-            </button>
-            <button
-              onClick={() => setActiveTab("UI/UX")}
-              className={`tab-btn ${activeTab === "UI/UX" ? "active" : ""}`}
-            >
-              UI/UX
-            </button>
-          </div>
+            {/* Tab navigation */}
+            <div className="flex justify-center space-x-16 w-full py-7">
+              <button
+                onClick={() => setActiveTab("front-end")}
+                className={`flex-1 flex flex-col md:flex-row max-w-max gap-x-2 items-center 
+              tab-btn ${activeTab === "front-end" ? "active" : ""}`}
+              >
+                <RxLayout />
+                Front-End
+              </button>
+              <button
+                onClick={() => setActiveTab("full-stack")}
+                className={`flex-1 flex flex-col md:flex-row max-w-max gap-x-2 items-center
+              tab-btn ${activeTab === "full-stack" ? "active" : ""}`}
+              >
+                <RxLayers />
+                Full-Stack
+              </button>
+              <button
+                onClick={() => setActiveTab("UI/UX")}
+                className={`flex-1 flex flex-col md:flex-row max-w-max gap-x-2 items-center
+              tab-btn ${activeTab === "UI/UX" ? "active" : ""}`}
+              >
+                <RxMix />
+                UI / UX
+              </button>
+            </div>
             <ProjectSlider activeTab={activeTab} />
           </motion.div>
         </div>

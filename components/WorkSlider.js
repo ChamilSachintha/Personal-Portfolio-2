@@ -18,7 +18,7 @@ export const workSlider = {
         },
         {
           title: "Project 2",
-          path: "/thumb2.jpg", 
+          path: "/thumb2.jpg",
         },
         {
           title: "Project 3",
@@ -26,7 +26,7 @@ export const workSlider = {
         },
         {
           title: "Project 4",
-          path: "/thumb4.jpg", 
+          path: "/thumb4.jpg",
         },
       ],
     },
@@ -39,7 +39,7 @@ export const workSlider = {
         },
         {
           title: "Project 2",
-          path: "/thumb2.jpg", 
+          path: "/thumb2.jpg",
         },
         {
           title: "Project 3",
@@ -47,7 +47,7 @@ export const workSlider = {
         },
         {
           title: "Project 4",
-          path: "/thumb4.jpg", 
+          path: "/thumb4.jpg",
         },
       ],
     },
@@ -60,7 +60,7 @@ export const workSlider = {
         },
         {
           title: "Project 2",
-          path: "/thumb4.jpg", 
+          path: "/thumb4.jpg",
         },
         {
           title: "Project 3",
@@ -68,13 +68,12 @@ export const workSlider = {
         },
         {
           title: "Project 4",
-          path: "/thumb3.jpg", 
+          path: "/thumb3.jpg",
         },
       ],
     },
   ],
 };
-
 
 const WorkSlider = ({ activeTab }) => {
   const filteredSlides = workSlider.slides.filter(
