@@ -34,7 +34,7 @@ const Services = () => {
             “ When passion and skill work together, expect a masterpiece. ”
             </motion.p>
           </div>
-          {/* Slide r */}
+          {/* Slider */}
           <motion.div
             variants={fadeIn("down", 0.6)}
             initial="hidden"
