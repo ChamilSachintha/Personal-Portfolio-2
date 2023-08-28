@@ -1,67 +1,86 @@
-// Swiper react components
+import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-
-// Swiper styles
 import "swiper/css";
 import "swiper/css/free-mode";
 import "swiper/css/pagination";
-
-// Icons
 import { BsArrowRight } from "react-icons/bs";
-
-// Required modules
 import { Pagination } from "swiper";
-
-// Next image
 import Image from "next/image";
 
-// Project data
 export const workSlider = {
   slides: [
     {
+      type: "front-end",
       images: [
         {
-          title: "title",
+          title: "Project 1",
           path: "/thumb1.jpg",
         },
         {
-          title: "title",
-          path: "/thumb2.jpg",
+          title: "Project 2",
+          path: "/thumb2.jpg", 
         },
         {
-          title: "title",
+          title: "Project 3",
           path: "/thumb3.jpg",
         },
         {
-          title: "title",
-          path: "/thumb4.jpg",
+          title: "Project 4",
+          path: "/thumb4.jpg", 
         },
       ],
     },
     {
+      type: "full-stack",
       images: [
         {
-          title: "title",
+          title: "Project 1",
           path: "/thumb4.jpg",
         },
         {
-          title: "title",
+          title: "Project 2",
+          path: "/thumb2.jpg", 
+        },
+        {
+          title: "Project 3",
           path: "/thumb1.jpg",
         },
         {
-          title: "title",
+          title: "Project 4",
+          path: "/thumb4.jpg", 
+        },
+      ],
+    },
+    {
+      type: "UI/UX",
+      images: [
+        {
+          title: "Project 1",
+          path: "/thumb1.jpg",
+        },
+        {
+          title: "Project 2",
+          path: "/thumb4.jpg", 
+        },
+        {
+          title: "Project 3",
           path: "/thumb2.jpg",
         },
         {
-          title: "title",
-          path: "/thumb3.jpg",
+          title: "Project 4",
+          path: "/thumb3.jpg", 
         },
       ],
     },
   ],
 };
 
-const WorkSlider = () => {
+
+const WorkSlider = ({ activeTab }) => {
+  const filteredSlides = workSlider.slides.filter(
+    (slide) => slide.type === activeTab
+  );
+
   return (
     <Swiper
       spaceBetween={10}
@@ -71,7 +90,7 @@ const WorkSlider = () => {
       modules={{ Pagination }}
       className="h-[280px] sm:h-[480px]"
     >
-      {workSlider.slides.map((slide, index) => {
+      {filteredSlides.map((slide, index) => {
         return (
           <SwiperSlide key={index}>
             <div className="grid grid-cols-2 grid-rows-2 gap-4 cursor-pointer">
@@ -83,7 +102,12 @@ const WorkSlider = () => {
                   >
                     <div className="flex items-center justify-center relative overflow-hidden group">
                       {/* Image */}
-                      <Image src={image.path} width={500} height={300} alt="" />
+                      <Image
+                        src={image.path}
+                        width={500}
+                        height={300}
+                        alt={image.title}
+                      />
                       {/* Overlay gradient */}
                       <div className="absolute inset-0 bg-gradient-to-l from-transparent via-[#e838cc] to-[#4a22bd] opacity-0 group-hover:opacity-80 transition-all duration-700"></div>
                       {/* Title */}

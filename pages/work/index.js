@@ -1,13 +1,13 @@
-// Components
+import React, { useState } from "react";
+import { motion } from "framer-motion";
+import { fadeIn } from "../../variants";
 import ProjectSlider from "../../components/WorkSlider";
 import Bulb from "../../components/Bulb";
 import Circles from "../../components/Circles";
 
-// Framer motion
-import { motion } from "framer-motion";
-import { fadeIn } from "../../variants";
-
 const Project = () => {
+  const [activeTab, setActiveTab] = useState("front-end");
+
   return (
     <div className="h-full bg-primary/30 py-36 flex items-center">
       <Circles />
@@ -20,7 +20,7 @@ const Project = () => {
               initial="hidden"
               animate="show"
               exit="hidden"
-              className="h2 xl:mt-12 text-[45px]"
+              className="h2 xl:mt-24 text-[45px]"
             >
               My Projects <span className="text-accent">.</span>
             </motion.h2>
@@ -35,15 +35,41 @@ const Project = () => {
               and challenges, and invent and reinvent. ”
             </motion.p>
           </div>
+          
           {/* Slider */}
           <motion.div
             variants={fadeIn("down", 0.6)}
             initial="hidden"
             animate="show"
             exit="hidden"
-            className="w-full xl:max-w-[65%]"
+            className="w-full xl:max-w-[65%] h-[500px]"
           >
-            <ProjectSlider />
+          {/* Tab navigation */}
+          <div className="flex justify-center space-x-10 w-full py-7">
+            <button
+              onClick={() => setActiveTab("front-end")}
+              className={`tab-btn ${
+                activeTab === "front-end" ? "active" : ""
+              }`}
+            >
+              Front-End
+            </button>
+            <button
+              onClick={() => setActiveTab("full-stack")}
+              className={`tab-btn ${
+                activeTab === "full-stack" ? "active" : ""
+              }`}
+            >
+              Full-Stack
+            </button>
+            <button
+              onClick={() => setActiveTab("UI/UX")}
+              className={`tab-btn ${activeTab === "UI/UX" ? "active" : ""}`}
+            >
+              UI/UX
+            </button>
+          </div>
+            <ProjectSlider activeTab={activeTab} />
           </motion.div>
         </div>
       </div>
