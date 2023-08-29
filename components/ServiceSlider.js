@@ -13,7 +13,7 @@ import { RxArrowTopRight, RxLayout, RxLayers, RxMix } from "react-icons/rx";
 import { FreeMode, Pagination } from "swiper";
 
 // Service data
-const serviceData = [
+export const serviceData = [
   {
     icon: <RxLayers />,
     title: "Full-Stack",
