@@ -7,7 +7,7 @@ import "swiper/css/free-mode";
 import "swiper/css/pagination";
 
 // Icons
-import { BsArrowRight } from "react-icons/bs";
+import { FaQuoteLeft } from "react-icons/fa";
 
 // Required modules
 import { Pagination } from "swiper";
@@ -16,7 +16,7 @@ import { Pagination } from "swiper";
 import Image from "next/image";
 
 // Testimonial data
-const testimonialData = [
+export const testimonialSlider = [
   {
     image: "/t-avt-1.png",
     name: "Anne Smith",
@@ -40,54 +40,6 @@ const testimonialData = [
   },
 ];
 
-
-
-// Project data
-export const testimonialSlider = {
-  slides: [
-    {
-      images: [
-        {
-          title: "title",
-          path: "/thumb1.jpg",
-        },
-        {
-          title: "title",
-          path: "/thumb2.jpg",
-        },
-        {
-          title: "title",
-          path: "/thumb3.jpg",
-        },
-        {
-          title: "title",
-          path: "/thumb4.jpg",
-        },
-      ],
-    },
-    {
-      images: [
-        {
-          title: "title",
-          path: "/thumb4.jpg",
-        },
-        {
-          title: "title",
-          path: "/thumb1.jpg",
-        },
-        {
-          title: "title",
-          path: "/thumb2.jpg",
-        },
-        {
-          title: "title",
-          path: "/thumb3.jpg",
-        },
-      ],
-    },
-  ],
-};
-
 const TestimonialSlider = () => {
   return (
     <Swiper
@@ -98,40 +50,30 @@ const TestimonialSlider = () => {
       modules={{ Pagination }}
       className="h-[280px] sm:h-[480px]"
     >
-      {testimonialSlider.slides.map((person, index) => {
+      {testimonialSlider.map((person, index) => {
         return (
           <SwiperSlide key={index}>
-            <div className="grid grid-cols-2 grid-rows-2 gap-4 cursor-pointer">
-              {person.images.map((image, index) => {
-                return (
-                  <div
-                    className="relative rounded-lg overflow-hidden flex items-center justify-center group"
-                    key={index}
-                  >
-                    <div className="flex items-center justify-center relative overflow-hidden group">
-                      {/* Image */}
-                      <Image src={image.path} width={500} height={300} alt="" />
-                      {/* Overlay gradient */}
-                      <div className="absolute inset-0 bg-gradient-to-l from-transparent via-[#e838cc] to-[#4a22bd] opacity-0 group-hover:opacity-80 transition-all duration-700"></div>
-                      {/* Title */}
-                      <div className="absolute bottom-0 translate-y-full group-hover:-translate-y-10 group-hover:xl:-translate-y-20 transition-all duration-300">
-                        <div className="flex items-center gap-x-2 text-[13px] tracking-[0.2em]">
-                          {/* Title part 1 */}
-                          <div className="delay-100">LIVE</div>
-                          {/* Title part 2 */}
-                          <div className="translate-y-[500%] group-hover:translate-y-0 transition-all duration-300 delay-150">
-                            PROJECT
-                          </div>
-                          {/* Icon*/}
-                          <div className="text-xl translate-y-[500%] group-hover:translate-y-0 transition-all duration-300 delay-200">
-                            <BsArrowRight />
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                );
-              })}
+          <div className="flex flex-col items-center md:flex-row gap-x-8 h-full px-16">
+            {/* Avatar, name and position */}
+            <div className="w-full flex mx-w-[300px]">
+              <div>
+                {/* Avatar */}
+                <div>Avatar image</div>
+                {/* Avatar */}
+                <div>Avatar image</div>
+                {/* Avatar */}
+                <div>Avatar image</div>
+              </div>
+              {/* Quote and message */}
+              <div className="flex-1 flex flex-col justify-center before:w-[1px] xl:before:bg-white/20 xl:before:absolute xl:before:left-0 xl:before:h-[200px] relative xl:pl-20">
+                {/* Quote icon */}
+                <div className="mb-4">
+                  <FaQuoteLeft className="text-4xl xl:text-6xl text-white/20 mx-auto md:mx-0" />
+                </div>
+                {/* Message */}
+                <div className="xl:text-lg text-center md:text-left">{person.message}</div>
+              </div>
+            </div>
             </div>
           </SwiperSlide>
         );
@@ -139,7 +81,5 @@ const TestimonialSlider = () => {
     </Swiper>
   );
 };
-
-
 
 export default TestimonialSlider;
