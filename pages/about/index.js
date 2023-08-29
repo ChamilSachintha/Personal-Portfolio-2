@@ -36,29 +36,29 @@ export const aboutData = [
       {
         title: "Front-End Development",
         icons: [
-          <FaHtml5 />,
-          <FaCss3 />,
-          <FaJs />,
-          <FaReact />,
-          <SiNextdotjs />,
-          <FaWordpress />,
+          <FaHtml5 key={"html5"} />,
+          <FaCss3 key={"css3"} />,
+          <FaJs key={"javascript"} />,
+          <FaReact key={"react"} />,
+          <SiNextdotjs key={"nextdotjs"} />,
+          <FaWordpress key={"wordpress"} />,
         ],
       },
       {
         title: "Back-End Development",
-        icons: [<FaPhp />, <SiMysql />],
+        icons: [<FaPhp key={"php"} />, <SiMysql key={"mysql"} />],
       },
       {
         title: "UI/UX Designing",
-        icons: [<FaFigma />, <SiAdobephotoshop />],
+        icons: [<FaFigma key={"figma"} />, <SiAdobephotoshop key={"photoshop"} />],
       },
       {
         title: "Video Editing",
-        icons: [<SiAdobepremierepro />],
+        icons: [<SiAdobepremierepro key={"premierpro"} />],
       },
       {
         title: "Graphic Designing",
-        icons: [<SiAdobephotoshop />, <SiCanva />],
+        icons: [<SiAdobephotoshop key={"photoshop"} />, <SiCanva key={"canva"} />],
       },
     ],
   },
@@ -131,7 +131,7 @@ const About = () => {
             exit="hidden"
             className="h2 text-[45px]"
           >
-            I'm not perfect but I'm a{" "}
+            I&apos;m not perfect but I&apos;m a{" "}
             <span className="text-accent">Limited Edition</span>
           </motion.h2>
           <motion.p
@@ -141,16 +141,16 @@ const About = () => {
             exit="hidden"
             className="max-w-[500px] mx-auto xl:mx-0 mb-6 xl:mb-12 px-2 xl:px-0 text-[14px]"
           >
-            I'm Chamil, a tech enthusiast whose journey began three years ago
-            when I dived into freelancing as a video editor while simultaneously
-            pursuing a Computer Engineering degree. I had the privilege of
-            collaborating with clients worldwide, from the US, UK, Brazil,
-            Australia, Hong Kong, and Japan. <br /> I'm now deeply immersed in
-            the IT field, having completed a rewarding 6-month software
-            engineering internship at Fixellit (PVT) LTD and currently working
-            part-time as a Web Editor at Siyakma Academy. Passionate about
-            crafting seamless user experiences, I'm actively seeking job
-            opportunities in Full-stack, Front-end, and UI/UX Engineering to
+            I&apos;m Chamil, a tech enthusiast whose journey began three years
+            ago when I dived into freelancing as a video editor while
+            simultaneously pursuing a Computer Engineering degree. I had the
+            privilege of collaborating with clients worldwide, from the US, UK,
+            Brazil, Australia, Hong Kong, and Japan. <br /> I&apos;m now deeply
+            immersed in the IT field, having completed a rewarding 6-month
+            software engineering internship at Fixellit (PVT) LTD and currently
+            working part-time as a Web Editor at Siyakma Academy. Passionate
+            about crafting seamless user experiences, I&apos;m actively seeking
+            job opportunities in Full-stack, Front-end, and UI/UX Engineering to
             continue my journey of innovation and growth.
           </motion.p>
           {/* Counters */}
@@ -230,7 +230,11 @@ const About = () => {
                   <div className="flex gap-x-4">
                     {/* Icons */}
                     {item.icons?.map((icon, itemIndex) => {
-                      return <div className="text-2xl text-white">{icon}</div>;
+                      return (
+                        <div key={itemIndex} className="text-2xl text-white">
+                          {icon}
+                        </div>
+                      );
                     })}
                   </div>
                 </div>
