@@ -20,7 +20,7 @@ const Home = () => {
             exit="hidden"
             className="h1 text-[45px]"
           >
-            Hi, I'm Chamil Sachintha <br />{" "}
+            Hi, I&apos;m Chamil Sachintha <br />{" "}
             <span className="text-accent">
               Full-Stack, Front-End & UI/UX <br />
               Engineer
