@@ -15,7 +15,7 @@ import { Navigation, Pagination } from "swiper";
 // Next image
 import Image from "next/image";
 
-// import Flag from "react-flagkit";
+import Flag from "react-flagkit";
 
 // Testimonial data
 export const testimonialSlider = [
@@ -25,7 +25,7 @@ export const testimonialSlider = [
     position:
       "BSc Eng. (Hons), PG. Dip(Structural), CEng, MIESL, Bridge & Structural Design Engineer",
     country: "Sri Lanka",
-    // icon: <Flag country="LK" />,
+    icon: <Flag country="LK"  />,
     message:
       '"I had privilege of working with Chamil Sachintha when we have joined our hands in organizing of first ever Inter University Debate competition (Engineering) organized by YMS, IESL which was successfully concluded in 2021. Competition was completely held in virtual platform, since the covid pandemic situation and Chamil has done remarkable role as the host throughout the event. As the Chief Organizer of the event, I highly recommend his expertise, dedication and team working skill and any team would be lucky to have Chamil in their team. I wish him every success in all his endeavors."',
   },
@@ -34,7 +34,7 @@ export const testimonialSlider = [
     name: "vasile96",
     position: "Customer",
     country: "UK",
-    // icon: <Flag country="GB" />,
+    icon: <Flag country="GB" />,
     message:
       '"Number 1! Great to work with! The best guy that I worked with! Superfast! Highly recommended!"',
   },
@@ -43,7 +43,7 @@ export const testimonialSlider = [
     name: "familiaoffice",
     position: "Customer",
     country: "Japan",
-    // icon: <Flag country="JP" />,
+    icon: <Flag country="JP" />,
     message:
       '"Perfect work as always! Trustable person! Great communication and took all my revisions and changed them to exactly what if asked for!"',
   },
@@ -52,7 +52,7 @@ export const testimonialSlider = [
     name: "hussain629",
     position: "Customer",
     country: "Hong Kong",
-    // icon: <Flag country="HK" />,
+    icon: <Flag country="HK" />,
     message: '"Good and fast work bro delivery on time thank you so much"',
   },
   {
@@ -60,7 +60,7 @@ export const testimonialSlider = [
     name: "sergiosombrao",
     position: "Customer",
     country: "Brazil",
-    // icon: <Flag country="BR" />,
+    icon: <Flag country="BR" />,
     message: '"Very good and fast job 5star"',
   },
   {
@@ -68,7 +68,7 @@ export const testimonialSlider = [
     name: "cannoneye",
     position: "Customer",
     country: "Australia",
-    // icon: <Flag country="AU" />,
+    icon: <Flag country="AU" />,
     message:
       '"Time Value great communication Happy returning Customer Thank you so much."',
   },
@@ -77,7 +77,7 @@ export const testimonialSlider = [
     name: "entzibasllari",
     position: "Customer",
     country: "UK",
-    // icon: <Flag country="GB" />,
+    icon: <Flag country="GB" />,
     message: '"The best."',
   },
   {
@@ -86,7 +86,7 @@ export const testimonialSlider = [
     position:
       "Chartered Civil Engineer | B.Sc. Eng (Hons) | MIE(SL) | Executive Engineer, PRDD, NWP",
     country: "Sri Lanka",
-    // icon: <Flag country="LK" />,
+    icon: <Flag country="LK" />,
     message:
       '"I met Mr. Chamil Sachintha when I was the Chairman for Young Members Section (YMS) of the Institution of Engineers Sri Lanka (IESL) for the session 2020/21. It was the first time YMS organized the Inter University Debate competition among the seven engineering faculties in SL. We had to conduct the entire event in virtual platform due to the pandemic situation and Mr. Chamil was the one of active members in the organizing committee. He was the host for all the matches. It was a big task since it was the first experience of most of us for having a debate competition in virtual platform. Mr. Chamil did an amazing work and it was miraculous for me to work with this young, energetic and enthusiastic personality."',
   },
@@ -95,7 +95,7 @@ export const testimonialSlider = [
     name: "Dinesh Piyasamara",
     position: "Content Creator | Intern Software Engineer",
     country: "Sri Lanka",
-    // icon: <Flag country="LK" />,
+    icon: <Flag country="LK" />,
     message:
       '"Chamil is an enthusiastic and passionate person, with a strong background in full-stack, front-end web development, UI/UX design, and related areas. He has a continuous effort to be the best in his professional doings."',
   },
@@ -104,7 +104,7 @@ export const testimonialSlider = [
     name: "hasnainahmad619",
     position: "Graphic Designer",
     country: "Pakistan",
-    // icon: <Flag country="PK" />,
+    icon: <Flag country="PK" />,
     message:
       '"It would a good experience to work with him. He is very Nice and Polite."',
   },
@@ -145,7 +145,7 @@ const TestimonialSlider = () => {
                       {person.country}
                     </div>
                     {/* Flag icon */}
-                    {/* <div className="pl-1">{person.icon}</div> */}
+                    <div className="pl-1">{person.icon}</div>
                   </div>
                 </div>
               </div>
