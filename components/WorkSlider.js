@@ -6,6 +6,8 @@ import "swiper/css/pagination";
 import { BsArrowRight } from "react-icons/bs";
 import { Pagination } from "swiper";
 import Image from "next/image";
+import Link from "next/link"; // Import Link from Next.js
+
 
 export const workSlider = {
   slides: [
@@ -13,20 +15,24 @@ export const workSlider = {
       type: "front-end",
       images: [
         {
-          title: "Project 1",
-          path: "/thumb1.jpg",
+          title: "Welpalla Signature",
+          path: "/thumb5.png",
+          link: "https://welpalla-signature.com/",
         },
         {
-          title: "Project 2",
-          path: "/thumb2.jpg",
+          title: "Student Progress Viewer",
+          path: "/thumb8.png",
+          link: "https://student-progress-viewer.vercel.app/",
         },
         {
-          title: "Project 3",
-          path: "/thumb3.jpg",
+          title: "Personal Portfolio",
+          path: "/thumb6.png",
+          link: "https://personal-portfolio1-sooty.vercel.app/",
         },
         {
-          title: "Project 4",
-          path: "/thumb4.jpg",
+          title: "Siyakma Academy",
+          path: "/thumb7.png",
+          link: "https://siyakmaacademy.com/",
         },
       ],
     },
@@ -35,19 +41,23 @@ export const workSlider = {
       images: [
         {
           title: "Project 1",
-          path: "/thumb4.jpg",
+          path: "/thumb8.jpg",
+          link: "",
         },
         {
           title: "Project 2",
           path: "/thumb2.jpg",
+          link: "",
         },
         {
           title: "Project 3",
           path: "/thumb1.jpg",
+          link: "",
         },
         {
           title: "Project 4",
           path: "/thumb4.jpg",
+          link: "",
         },
       ],
     },
@@ -57,18 +67,22 @@ export const workSlider = {
         {
           title: "Project 1",
           path: "/thumb1.jpg",
+          link: "",
         },
         {
           title: "Project 2",
-          path: "/thumb4.jpg",
+          path: "/thumb2.jpg",
+          link: "",
         },
         {
           title: "Project 3",
-          path: "/thumb2.jpg",
+          path: "/thumb3.jpg",
+          link: "",
         },
         {
           title: "Project 4",
-          path: "/thumb3.jpg",
+          path: "/thumb2.jpg",
+          link: "",
         },
       ],
     },
@@ -87,7 +101,7 @@ const WorkSlider = ({ activeTab }) => {
         clickable: true,
       }}
       modules={[ Pagination ]}
-      className="h-[280px] sm:h-[480px]"
+      className="h-[280px] sm:h-[580px]"
     >
       {filteredSlides.map((slide, index) => {
         return (
@@ -95,6 +109,7 @@ const WorkSlider = ({ activeTab }) => {
             <div className="grid grid-cols-2 grid-rows-2 gap-4 cursor-pointer">
               {slide.images.map((image, index) => {
                 return (
+                  <Link key={index} href={`${image.link}`} target="_blank" > 
                   <div
                     className="relative rounded-lg overflow-hidden flex items-center justify-center group"
                     key={index}
@@ -113,19 +128,20 @@ const WorkSlider = ({ activeTab }) => {
                       <div className="absolute bottom-0 translate-y-full group-hover:-translate-y-10 group-hover:xl:-translate-y-20 transition-all duration-300">
                         <div className="flex items-center gap-x-2 text-[13px] tracking-[0.2em]">
                           {/* Title part 1 */}
-                          <div className="delay-100">LIVE</div>
+                          <div className="delay-100 drop-shadow-md">LIVE</div>
                           {/* Title part 2 */}
-                          <div className="translate-y-[500%] group-hover:translate-y-0 transition-all duration-300 delay-150">
+                          <div className="translate-y-[500%] group-hover:translate-y-0 transition-all duration-300 delay-150 drop-shadow-md">
                             PROJECT
                           </div>
                           {/* Icon*/}
-                          <div className="text-xl translate-y-[500%] group-hover:translate-y-0 transition-all duration-300 delay-200">
+                          <div className="text-xl translate-y-[500%] group-hover:translate-y-0 transition-all duration-300 delay-200 drop-shadow-md">
                             <BsArrowRight />
                           </div>
                         </div>
                       </div>
                     </div>
                   </div>
+                  </Link>
                 );
               })}
             </div>

@@ -16,7 +16,7 @@ const Project = () => {
       <div className="container mx-auto">
         <div className="flex flex-col xl:flex-row gap-x-8">
           {/* Text */}
-          <div className="text-center flex xl:w-[30vw] flex-col lg:text-left mb-4 xl:mb-0">
+          <div className="text-center flex xl:w-[30vw] flex-col lg:text-left mb-4 xl:mb-0 mt-3">
             <motion.h2
               variants={fadeIn("up", 0.2)}
               initial="hidden"
@@ -51,7 +51,7 @@ const Project = () => {
               <button
                 onClick={() => setActiveTab("front-end")}
                 className={`flex-1 flex flex-col md:flex-row max-w-max gap-x-2 items-center 
-              tab-btn ${activeTab === "front-end" ? "active" : ""}`}
+              tab-btn ${activeTab === "front-end" ? "active text-accent font-semibold" : ""}`}
               >
                 <RxLayout />
                 Front-End
@@ -59,7 +59,7 @@ const Project = () => {
               <button
                 onClick={() => setActiveTab("full-stack")}
                 className={`flex-1 flex flex-col md:flex-row max-w-max gap-x-2 items-center
-              tab-btn ${activeTab === "full-stack" ? "active" : ""}`}
+              tab-btn ${activeTab === "full-stack" ? "active text-accent font-semibold" : ""}`}
               >
                 <RxLayers />
                 Full-Stack
@@ -67,7 +67,7 @@ const Project = () => {
               <button
                 onClick={() => setActiveTab("UI/UX")}
                 className={`flex-1 flex flex-col md:flex-row max-w-max gap-x-2 items-center
-              tab-btn ${activeTab === "UI/UX" ? "active" : ""}`}
+              tab-btn ${activeTab === "UI/UX" ? "active text-accent font-semibold" : ""}`}
               >
                 <RxMix />
                 UI / UX
