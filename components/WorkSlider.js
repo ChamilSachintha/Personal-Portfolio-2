@@ -1,13 +1,25 @@
 import React from "react";
+
+// Swiper react components
 import { Swiper, SwiperSlide } from "swiper/react";
+
+// Swiper styles
 import "swiper/css";
 import "swiper/css/free-mode";
 import "swiper/css/pagination";
-import { BsArrowRight } from "react-icons/bs";
-import { Pagination } from "swiper";
-import Image from "next/image";
-import Link from "next/link"; // Import Link from Next.js
+import "swiper/css/navigation";
 
+// Icons
+import { BsArrowRight } from "react-icons/bs";
+
+// Required modules
+import { Navigation, Pagination } from "swiper";
+
+// Next image
+import Image from "next/image";
+
+// Link
+import Link from "next/link";
 
 export const workSlider = {
   slides: [
@@ -65,6 +77,21 @@ export const workSlider = {
       type: "UI/UX",
       images: [
         {
+          title: "Academic Calendar UI",
+          path: "/thumb15.png",
+          link: "https://www.behance.net/gallery/179137501/Academic-Calendar-UI-Design",
+        },
+        {
+          title: "Space Travel App",
+          path: "/thumb14.png",
+          link: "https://www.behance.net/gallery/179123389/Space-Travel-Mobile-App-UIUX-Design",
+        },
+        {
+          title: "Resort Website UI/UX Design",
+          path: "/thumb13.png",
+          link: "https://www.behance.net/gallery/179113783/Resort-Website-UIUX-Design",
+        },
+        {
           title: "Food Ordering - Customer App",
           path: "/thumb9.png",
           link: "https://www.behance.net/gallery/179062255/Food-Ordering-Customer-App",
@@ -84,11 +111,6 @@ export const workSlider = {
           path: "/thumb10.png",
           link: "https://www.behance.net/gallery/179067551/Food-Ordering-Rider-App",
         },
-        {
-          title: "Resort Website UI/UX Design",
-          path: "/thumb13.png",
-          link: "https://www.behance.net/gallery/179113783/Resort-Website-UIUX-Design",
-        },
       ],
     },
   ],
@@ -102,10 +124,11 @@ const WorkSlider = ({ activeTab }) => {
   return (
     <Swiper
       spaceBetween={10}
+      navigation={true}
       pagination={{
         clickable: true,
       }}
-      modules={[ Pagination ]}
+      modules={[Navigation, Pagination]}
       className="h-[280px] sm:h-[580px]"
     >
       {filteredSlides.map((slide, index) => {
@@ -114,38 +137,38 @@ const WorkSlider = ({ activeTab }) => {
             <div className="grid grid-cols-2 grid-rows-2 gap-4 cursor-pointer">
               {slide.images.map((image, index) => {
                 return (
-                  <Link key={index} href={`${image.link}`} target="_blank" > 
-                  <div
-                    className="relative rounded-lg overflow-hidden flex items-center justify-center group"
-                    key={index}
-                  >
-                    <div className="flex items-center justify-center relative overflow-hidden group">
-                      {/* Image */}
-                      <Image
-                        src={image.path}
-                        width={500}
-                        height={300}
-                        alt={image.title}
-                      />
-                      {/* Overlay gradient */}
-                      <div className="absolute inset-0 bg-gradient-to-l from-transparent via-[#e838cc] to-[#4a22bd] opacity-0 group-hover:opacity-80 transition-all duration-700"></div>
-                      {/* Title */}
-                      <div className="absolute bottom-0 translate-y-full group-hover:-translate-y-10 group-hover:xl:-translate-y-20 transition-all duration-300">
-                        <div className="flex items-center gap-x-2 text-[13px] tracking-[0.2em]">
-                          {/* Title part 1 */}
-                          <div className="delay-100 drop-shadow-md">LIVE</div>
-                          {/* Title part 2 */}
-                          <div className="translate-y-[500%] group-hover:translate-y-0 transition-all duration-300 delay-150 drop-shadow-md">
-                            PROJECT
-                          </div>
-                          {/* Icon*/}
-                          <div className="text-xl translate-y-[500%] group-hover:translate-y-0 transition-all duration-300 delay-200 drop-shadow-md">
-                            <BsArrowRight />
+                  <Link key={index} href={`${image.link}`} target="_blank">
+                    <div
+                      className="relative rounded-lg overflow-hidden flex items-center justify-center group"
+                      key={index}
+                    >
+                      <div className="flex items-center justify-center relative overflow-hidden group">
+                        {/* Image */}
+                        <Image
+                          src={image.path}
+                          width={500}
+                          height={300}
+                          alt={image.title}
+                        />
+                        {/* Overlay gradient */}
+                        <div className="absolute inset-0 bg-gradient-to-l from-transparent via-[#e838cc] to-[#4a22bd] opacity-0 group-hover:opacity-80 transition-all duration-700"></div>
+                        {/* Title */}
+                        <div className="absolute bottom-0 translate-y-full group-hover:-translate-y-10 group-hover:xl:-translate-y-20 transition-all duration-300">
+                          <div className="flex items-center gap-x-2 text-[13px] tracking-[0.2em]">
+                            {/* Title part 1 */}
+                            <div className="delay-100 drop-shadow-md">LIVE</div>
+                            {/* Title part 2 */}
+                            <div className="translate-y-[500%] group-hover:translate-y-0 transition-all duration-300 delay-150 drop-shadow-md">
+                              PROJECT
+                            </div>
+                            {/* Icon*/}
+                            <div className="text-xl translate-y-[500%] group-hover:translate-y-0 transition-all duration-300 delay-200 drop-shadow-md">
+                              <BsArrowRight />
+                            </div>
                           </div>
                         </div>
                       </div>
                     </div>
-                  </div>
                   </Link>
                 );
               })}
