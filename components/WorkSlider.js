@@ -52,24 +52,9 @@ export const workSlider = {
       type: "full-stack",
       images: [
         {
-          title: "Project 1",
-          path: "/thumb8.jpg",
-          link: "",
-        },
-        {
-          title: "Project 2",
-          path: "/thumb2.jpg",
-          link: "",
-        },
-        {
-          title: "Project 3",
-          path: "/thumb1.jpg",
-          link: "",
-        },
-        {
-          title: "Project 4",
-          path: "/thumb4.jpg",
-          link: "",
+          title: "Pharmacy Management System",
+          path: "/thumb16.png",
+          link: "https://github.com/ChamilSachintha/Pharmacy-Management-System",
         },
       ],
     },
