@@ -107,7 +107,7 @@ const About = () => {
   const [index, setIndex] = useState(0);
   console.log(index);
   return (
-    <div className="h-full bg-primary/32 py-32 text-center xl:text-left">
+    <div className="h-full bg-primary/32 py-32 text-center xl:text-left lg:overflow-hidden lg:h-screen">
       <Circles />
       {/* Particles */}
       {/* <ParticlesContainer /> */}
@@ -129,7 +129,7 @@ const About = () => {
             initial="hidden"
             animate="show"
             exit="hidden"
-            className="h2 text-[45px]"
+            className="h2 lg:text-[45px] text-[32px]"
           >
             I&apos;m not perfect but I&apos;m a{" "}
             <span className="text-accent">Limited Edition</span>

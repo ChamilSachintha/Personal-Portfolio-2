@@ -8,9 +8,9 @@ import { fadeIn } from "../variants"; // Variants
 
 const Home = () => {
   return (
-    <div className="bg-primary/60 h-full">
+    <div className="bg-primary/60 overflow-hidden h-screen">
       {/* Text */}
-      <div className="w-full h-full bg-gradient-to-r from-primary/10 via-black/30 to-black/10">
+      <div className="w-full h-full bg-gradient-to-r from-primary/10 via-black/30 to-black/10 mx-auto">
         <div className="text-center flex flex-col justify-center xl:pt-40 xl:text-left h-full container mx-auto">
           {/* Heading */}
           <motion.h1
@@ -18,7 +18,7 @@ const Home = () => {
             initial="hidden"
             animate="show"
             exit="hidden"
-            className="h1 text-[45px]"
+            className="h1 lg:text-[45px] text-[32px]"
           >
             Hi, I&apos;m Chamil Sachintha <br />{" "}
             <span className="text-accent">
