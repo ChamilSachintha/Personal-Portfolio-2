@@ -100,7 +100,7 @@ export const testimonialSlider = [
       '"Chamil is an enthusiastic and passionate person, with a strong background in full-stack, front-end web development, UI/UX design, and related areas. He has a continuous effort to be the best in his professional doings."',
   },
   {
-    image: "/client_hasnainahmad619.jpg",
+    image: "/client_hasnainahmad.jpg",
     name: "hasnainahmad619",
     position: "Graphic Designer",
     country: "Pakistan",
