@@ -9,7 +9,7 @@ const Header = () => {
         {/* Logo */}
         <Link href={"/"}>
           <Image
-          src={"/logo.png"}
+          src={"/logo2.png"}
           width={230}
           height={48}
           alt=""
