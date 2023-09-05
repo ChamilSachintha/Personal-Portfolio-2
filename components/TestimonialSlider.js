@@ -137,7 +137,7 @@ const TestimonialSlider = () => {
                   <div className="text-[12px] uppercase font-extralight tracking-widest">
                     {person.position}
                   </div>
-                  {/* COuntry name and flag */}
+                  {/* Country name and flag */}
                   <div className="flex items-center justify-center mt-1">
                     <FaMapMarkerAlt className="w-5 h-5 text-accent" />
                     {/* Country name */}
