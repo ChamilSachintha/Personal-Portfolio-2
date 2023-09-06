@@ -61,15 +61,28 @@ export const workSlider = {
     {
       type: "UI/UX",
       images: [
-        // {
-        //   title: "Academic Calendar UI",
-        //   path: "/thumb15.png",
-        //   link: "https://www.behance.net/gallery/179137501/Academic-Calendar-UI-Design",
-        // },
+        
         {
           title: "Space Travel App",
           path: "/thumb14.png",
           link: "https://www.behance.net/gallery/179123389/Space-Travel-Mobile-App-UIUX-Design",
+        },
+        {
+          title: "Brain Tumor Detection AI Website UI",
+          path: "/thumb11.png",
+          link: "https://www.behance.net/gallery/179109025/Brain-Tumor-Detection-AI-Website-UI",
+        },
+        
+        {
+          title: "Food Ordering - Customer App",
+          path: "/thumb9.png",
+          link: "https://www.behance.net/gallery/179062255/Food-Ordering-Customer-App",
+        },
+     
+        {
+          title: "Online Grocery Ordering App UI Design",
+          path: "/thumb12.png",
+          link: "https://www.behance.net/gallery/179110357/Online-Grocery-Ordering-App-UI-Design",
         },
         {
           title: "Resort Website UI/UX Design",
@@ -77,25 +90,15 @@ export const workSlider = {
           link: "https://www.behance.net/gallery/179113783/Resort-Website-UIUX-Design",
         },
         {
-          title: "Food Ordering - Customer App",
-          path: "/thumb9.png",
-          link: "https://www.behance.net/gallery/179062255/Food-Ordering-Customer-App",
+          title: "Food Ordering - Rider App",
+          path: "/thumb10.png",
+          link: "https://www.behance.net/gallery/179067551/Food-Ordering-Rider-App",
         },
-        // {
-        //   title: "Brain Tumor Detection AI Website UI",
-        //   path: "/thumb11.png",
-        //   link: "https://www.behance.net/gallery/179109025/Brain-Tumor-Detection-AI-Website-UI",
-        // },
         {
-          title: "Online Grocery Ordering App UI Design",
-          path: "/thumb12.png",
-          link: "https://www.behance.net/gallery/179110357/Online-Grocery-Ordering-App-UI-Design",
+          title: "Academic Calendar UI",
+          path: "/thumb15.png",
+          link: "https://www.behance.net/gallery/179137501/Academic-Calendar-UI-Design",
         },
-        // {
-        //   title: "Food Ordering - Rider App",
-        //   path: "/thumb10.png",
-        //   link: "https://www.behance.net/gallery/179067551/Food-Ordering-Rider-App",
-        // },
       ],
     },
   ],
@@ -114,7 +117,7 @@ const WorkSlider = ({ activeTab }) => {
         clickable: true,
       }}
       modules={[Navigation, Pagination]}
-      className="h-[280px] sm:h-[580px]"
+      className=""
     >
       {filteredSlides.map((slide, index) => {
         return (
