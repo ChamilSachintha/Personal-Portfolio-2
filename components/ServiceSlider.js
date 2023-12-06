@@ -17,12 +17,12 @@ import Link from "next/link";
 
 // Service data
 export const serviceData = [
-  {
-    icon: <RxLayers />,
-    title: "Full-Stack",
-    description:
-      "Crafting comprehensive solutions that seamlessly integrate front-end and back-end technologies for an end-to-end experience.",
-  },
+  // {
+  //   icon: <RxLayers />,
+  //   title: "Full-Stack",
+  //   description:
+  //     "Crafting comprehensive solutions that seamlessly integrate front-end and back-end technologies for an end-to-end experience.",
+  // },
   {
     icon: <RxLayout />,
     title: "Front-End",

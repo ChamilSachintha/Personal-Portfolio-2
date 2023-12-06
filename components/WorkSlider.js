@@ -49,19 +49,8 @@ export const workSlider = {
       ],
     },
     {
-      type: "full-stack",
-      images: [
-        {
-          title: "Pharmacy Management System",
-          path: "/thumb16.png",
-          link: "https://github.com/ChamilSachintha/Pharmacy-Management-System",
-        },
-      ],
-    },
-    {
       type: "UI/UX",
       images: [
-        
         {
           title: "Space Travel App",
           path: "/thumb14.png",
@@ -72,13 +61,13 @@ export const workSlider = {
           path: "/thumb11.png",
           link: "https://www.behance.net/gallery/179109025/Brain-Tumor-Detection-AI-Website-UI",
         },
-        
+
         {
           title: "Food Ordering - Customer App",
           path: "/thumb9.png",
           link: "https://www.behance.net/gallery/179062255/Food-Ordering-Customer-App",
         },
-     
+
         {
           title: "Online Grocery Ordering App UI Design",
           path: "/thumb12.png",
@@ -98,6 +87,16 @@ export const workSlider = {
           title: "Academic Calendar UI",
           path: "/thumb15.png",
           link: "https://www.behance.net/gallery/179137501/Academic-Calendar-UI-Design",
+        },
+      ],
+    },
+    {
+      type: "full-stack",
+      images: [
+        {
+          title: "Pharmacy Management System",
+          path: "/thumb16.png",
+          link: "https://github.com/ChamilSachintha/Pharmacy-Management-System",
         },
       ],
     },

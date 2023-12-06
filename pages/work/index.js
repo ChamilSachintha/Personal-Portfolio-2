@@ -51,26 +51,36 @@ const Project = () => {
               <button
                 onClick={() => setActiveTab("front-end")}
                 className={`flex-1 flex flex-col md:flex-row max-w-max gap-x-2 items-center 
-              tab-btn ${activeTab === "front-end" ? "active text-accent font-semibold" : ""}`}
+              tab-btn ${
+                activeTab === "front-end"
+                  ? "active text-accent font-semibold"
+                  : ""
+              }`}
               >
                 <RxLayout />
                 Front-End
               </button>
               <button
-                onClick={() => setActiveTab("full-stack")}
-                className={`flex-1 flex flex-col md:flex-row max-w-max gap-x-2 items-center
-              tab-btn ${activeTab === "full-stack" ? "active text-accent font-semibold" : ""}`}
-              >
-                <RxLayers />
-                Full-Stack
-              </button>
-              <button
                 onClick={() => setActiveTab("UI/UX")}
                 className={`flex-1 flex flex-col md:flex-row max-w-max gap-x-2 items-center
-              tab-btn ${activeTab === "UI/UX" ? "active text-accent font-semibold" : ""}`}
+              tab-btn ${
+                activeTab === "UI/UX" ? "active text-accent font-semibold" : ""
+              }`}
               >
                 <RxMix />
                 UI / UX
+              </button>
+              <button
+                onClick={() => setActiveTab("full-stack")}
+                className={`flex-1 flex flex-col md:flex-row max-w-max gap-x-2 items-center
+              tab-btn ${
+                activeTab === "full-stack"
+                  ? "active text-accent font-semibold"
+                  : ""
+              }`}
+              >
+                <RxLayers />
+                Full-Stack
               </button>
             </div>
             <ProjectSlider activeTab={activeTab} />

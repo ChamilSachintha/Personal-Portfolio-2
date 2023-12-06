@@ -50,7 +50,10 @@ export const aboutData = [
       },
       {
         title: "UI/UX Designing",
-        icons: [<FaFigma key={"figma"} />, <SiAdobephotoshop key={"photoshop"} />],
+        icons: [
+          <FaFigma key={"figma"} />,
+          <SiAdobephotoshop key={"photoshop"} />,
+        ],
       },
       {
         title: "Video Editing",
@@ -58,13 +61,20 @@ export const aboutData = [
       },
       {
         title: "Graphic Designing",
-        icons: [<SiAdobephotoshop key={"photoshop"} />, <SiCanva key={"canva"} />],
+        icons: [
+          <SiAdobephotoshop key={"photoshop"} />,
+          <SiCanva key={"canva"} />,
+        ],
       },
     ],
   },
   {
     title: "work experience",
     info: [
+      {
+        title: "Associate UI/UX Engineer - Axienta (Pvt) Ltd",
+        stage: "NOV 2023 - Present",
+      },
       {
         title: "Web Editor (Part time) - Siyakma Academy",
         stage: "FEB 2023 - Present",
@@ -139,19 +149,23 @@ const About = () => {
             initial="hidden"
             animate="show"
             exit="hidden"
-            className="max-w-[500px] mx-auto xl:mx-0 mb-6 xl:mb-12 px-2 xl:px-0 text-[14px]"
+            className="max-w-[500px] mx-auto xl:mx-0 mb-6 xl:mb-12 px-2 xl:px-0 text-[12px]"
           >
-            I&apos;m Chamil, a tech enthusiast whose journey began three years
-            ago when I dived into freelancing as a video editor while
+            Hello, I&apos;m Chamil, a UI/UX enthusiast whose journey began three
+            years ago when I dived into freelancing as a video editor while
             simultaneously pursuing a Computer Engineering degree. I had the
             privilege of collaborating with clients worldwide, from the US, UK,
-            Brazil, Australia, Hong Kong, and Japan. <br /> I&apos;m now deeply
-            immersed in the IT field, having completed a rewarding 6-month
-            software engineering internship at Fixellit (PVT) LTD and currently
-            working part-time as a Web Editor at Siyakma Academy. Passionate
-            about crafting seamless user experiences, I&apos;m actively seeking
-            job opportunities in Full-stack, Front-end, and UI/UX Engineering to
-            continue my journey of innovation and growth.
+            Brazil, Australia, Hong Kong, and Japan. <br /> Currently, I&apos;m
+            deeply immersed in the IT field and serve as an Associate UI/UX
+            Engineer at Axienta. My passion lies in crafting seamless user
+            experiences. In the past, I gained valuable experiences through a
+            rewarding 6-month software engineering internship at Fixellit (PVT)
+            LTD and also I worked as a part-time Web Editor at Siyakma Academy.{" "}
+            <br /> My focus is on driving innovation and growth in the realms of
+            Front-end, and UI/UX Engineering. I&apos;m dedicated to creating
+            impactful digital experiences and am open to exciting opportunities
+            that allow me to contribute my skills and creativity to new
+            projects.
           </motion.p>
           {/* Counters */}
           <motion.div

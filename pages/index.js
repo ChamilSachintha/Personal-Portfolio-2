@@ -22,7 +22,7 @@ const Home = () => {
           >
             Hi, I&apos;m Chamil Sachintha <br />{" "}
             <span className="text-accent">
-              Full-Stack, Front-End & UI/UX <br />
+              Front-End & UI/UX <br />
               Engineer
             </span>
           </motion.h1>
@@ -34,8 +34,7 @@ const Home = () => {
             exit="hidden"
             className="max-w-sm xl:max-w-xl mx-auto xl:mx-0 mb-10 xl:mb-16"
           >
-            I am passionate about developing Full-Stack applications, Front-End
-            applications and designing UI/UX and have a good point of view on
+            I am passionate about developing Front-End applications and designing UI/UX and have a good point of view on
             colors.
           </motion.p>
           {/* Button */}
