@@ -3,8 +3,8 @@ import Image from "next/image"; // Next image
 const Avatar = () => {
   return (
     <div className="hidden xl:flex xl:max-w-none">
-      <Image 
-        src={"/avatar2.png"}
+      <Image
+        src={"/avatar1.png"}
         width={737}
         height={678}
         alt=""
