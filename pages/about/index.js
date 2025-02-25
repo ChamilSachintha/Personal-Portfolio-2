@@ -149,23 +149,14 @@ const About = () => {
             initial="hidden"
             animate="show"
             exit="hidden"
-            className="max-w-[500px] mx-auto xl:mx-0 mb-6 xl:mb-12 px-2 xl:px-0 text-[12px]"
+            className="max-w-[500px] mx-auto xl:mx-0 mb-6 xl:mb-12 px-2 xl:px-0"
           >
-            Hello, I&apos;m Chamil, a UI/UX enthusiast whose journey began three
-            years ago when I dived into freelancing as a video editor while
-            simultaneously pursuing a Computer Engineering degree. I had the
-            privilege of collaborating with clients worldwide, from the US, UK,
-            Brazil, Australia, Hong Kong, and Japan. <br /> Currently, I&apos;m
-            deeply immersed in the IT field and serve as an Associate UI/UX
-            Engineer at Axienta. My passion lies in crafting seamless user
-            experiences. In the past, I gained valuable experiences through a
-            rewarding 6-month software engineering internship at Fixellit (PVT)
-            LTD and also I worked as a part-time Web Editor at Siyakma Academy.{" "}
-            <br /> My focus is on driving innovation and growth in the realms of
-            Front-end, and UI/UX Engineering. I&apos;m dedicated to creating
-            impactful digital experiences and am open to exciting opportunities
-            that allow me to contribute my skills and creativity to new
-            projects.
+            I&apos;m Chamil, a UI/UX Engineer with a strong foundation in
+            front-end development, video editing, and graphic design—a complete
+            skill set for crafting seamless digital experiences. With a Computer
+            Engineering degree and a background in software engineering, I blend
+            technical expertise with creative problem-solving to design
+            intuitive and impactful user experiences.
           </motion.p>
           {/* Counters */}
           <motion.div
