@@ -34,8 +34,7 @@ const Home = () => {
             exit="hidden"
             className="max-w-sm xl:max-w-xl mx-auto xl:mx-0 mb-10 xl:mb-16"
           >
-            I am passionate about developing Front-End applications and designing UI/UX and have a good point of view on
-            colors.
+            I am passionate about developing Front-end applications and designing UI/UX with a keen eye for colors and aesthetics. 
           </motion.p>
           {/* Button */}
           <div className="flex justify-center xl:hidden relative">
