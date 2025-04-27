@@ -76,16 +76,16 @@ export const aboutData = [
         stage: "NOV 2023 - Present",
       },
       {
-        title: "Web Editor (Part time) - Siyakma Academy",
-        stage: "FEB 2023 - Present",
+        title: "Web Developer, UI/UX Designer & Video Editor - Freelancer",
+        stage: "APR 2020 - Present",
+      },
+      {
+        title: " Digital Media & Web Editor - Siyakma Academy",
+        stage: "FEB 2023 - JAN 2024",
       },
       {
         title: "Intern Software Engineer - Fixellit (PVT) LTD",
         stage: "FEB 2023 - JUL 2023",
-      },
-      {
-        title: "Video Editor - Fiverr (Freelance)",
-        stage: "APR 2020 - APR 2021",
       },
       {
         title: "Trainee - People's Bank RHO Badulla",
@@ -151,12 +151,15 @@ const About = () => {
             exit="hidden"
             className="max-w-[500px] mx-auto xl:mx-0 mb-6 xl:mb-12 px-2 xl:px-0"
           >
-            I&apos;m Chamil, a UI/UX Engineer with a strong foundation in
-            front-end development, video editing, and graphic design—a complete
-            skill set for crafting seamless digital experiences. With a Computer
-            Engineering degree and a background in software engineering, I blend
-            technical expertise with creative problem-solving to design
-            intuitive and impactful user experiences.
+            I&apos;m Chamil, currently working as a UI/UX Engineer, while also
+            freelancing as a Web Developer, UI/UX Designer, Video Editor, and
+            Graphic Designer. I hold a BSc (Hons) degree in Computer
+            Engineering. As a passionate UI/UX enthusiast, I love developing
+            front-end applications and designing intuitive, aesthetic interfaces
+            with a keen eye for colors and visual balance. Through freelancing,
+            I've had the opportunity to work with clients worldwide from the US,
+            UK, Brazil, Australia, Hong Kong, and Japan, creating impactful
+            digital experiences that blend creativity and functionality.
           </motion.p>
           {/* Counters */}
           <motion.div
@@ -170,7 +173,7 @@ const About = () => {
               {/* Experience */}
               <div className="relative flex-1 after:w-[1px] after:h-full after:bg-white/10 after:absolute after:top-0 after:right-0">
                 <div className="text-2xl xl:text-4xl font-extrabold text-accent mb-2">
-                  <CountUp start={0} end={3} duration={5} /> +
+                  <CountUp start={0} end={4} duration={5} /> +
                 </div>
                 <div className="text-xs uppercase tracking-[1px] loading-[1.4] max-w-[100px]">
                   Years of experience
@@ -229,9 +232,11 @@ const About = () => {
                   className="flex-1 flex flex-col md:flex-row max-w-max gap-x-2 items-center text-white/60"
                 >
                   {/* Title */}
-                  <div className="font-light mb-2 md:mb-0">{item.title}</div>
-                  <div className="hidden md:flex">-</div>
-                  <div>{item.stage}</div>
+                  <div className="text-sm font-light mb-2 md:mb-0">
+                    {item.title}
+                  </div>
+                  <div className="text-xs hidden md:flex">:</div>
+                  <div className="text-xs">{item.stage}</div>
                   <div className="flex gap-x-4">
                     {/* Icons */}
                     {item.icons?.map((icon, itemIndex) => {
