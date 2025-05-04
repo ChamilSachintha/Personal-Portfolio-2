@@ -7,7 +7,7 @@ import "swiper/css/free-mode";
 import "swiper/css/pagination";
 
 // Icons
-import { RxArrowTopRight, RxLayout, RxLayers, RxMix } from "react-icons/rx";
+import { RxArrowTopRight, RxLayout, RxVideo, RxMix, RxImage, RxLaptop } from "react-icons/rx";
 
 // Required modules
 import { FreeMode, Pagination } from "swiper";
@@ -17,14 +17,8 @@ import Link from "next/link";
 
 // Service data
 export const serviceData = [
-  // {
-  //   icon: <RxLayers />,
-  //   title: "Full-Stack",
-  //   description:
-  //     "Crafting comprehensive solutions that seamlessly integrate front-end and back-end technologies for an end-to-end experience.",
-  // },
   {
-    icon: <RxLayout />,
+    icon: <RxLaptop />,
     title: "Front-End",
     description:
       "Transforming design concepts into interactive and user-friendly interfaces that captivate and engage users.",
@@ -33,7 +27,19 @@ export const serviceData = [
     icon: <RxMix />,
     title: "UI / UX",
     description:
-      "Elevating digital experiences through intuitive user interfaces and thoughtful user experiences that leave a lasting impact.",
+      "Designing intuitive, user-friendly interfaces that enhance usability and create seamless experiences.",
+  },
+  {
+    icon: <RxVideo />,
+    title: "Video Editing",
+    description:
+      "Editing raw footage into clear, compelling videos that tell your story and keep your audience engaged.",
+  },
+  {
+    icon: <RxImage />,
+    title: "Graphic Design",
+    description:
+      "Crafting clean, engaging visuals that communicate your message clearly and enhance your brand’s identity.",
   },
 ];
 
@@ -50,6 +56,10 @@ const ServiceSlider = () => {
           slidesPerView: 3,
           spaceBetween: 15,
         },
+        1024: {
+    slidesPerView: 4, // Show all 4 on larger screens
+    spaceBetween: 15,
+  },
       }}
       freeMode={true}
       pagination={{
@@ -67,8 +77,8 @@ const ServiceSlider = () => {
                 <div className="text-4xl text-accent mb-4">{item.icon}</div>
                 {/* Title and description */}
                 <div className="mb-8">
-                  <div className="mb-2 text-lg">{item.title}</div>
-                  <p className="max-w-[350px] leading-normal ">
+                  <div className="mb-2 text-base">{item.title}</div>
+                  <p className="max-w-[350px] text-sm leading-normal ">
                     {item.description}
                   </p>
                 </div>
