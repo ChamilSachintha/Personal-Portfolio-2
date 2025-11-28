@@ -22,8 +22,7 @@ const Home = () => {
           >
             Hi, I&apos;m Chamil Sachintha <br />{" "}
             <span className="text-accent">
-              Front-End & UI/UX <br />
-              Engineer
+              UX/UI Engineer
             </span>
           </motion.h1>
           {/* Introduction */}
