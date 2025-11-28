@@ -20,7 +20,7 @@ const Home = () => {
             exit="hidden"
             className="h1 lg:text-[45px] text-[32px]"
           >
-            Hi, I&apos;m Chamil Sachintha. <br />{" "}
+            Hi, I&apos;m Chamil Sachintha <br />{" "}
             <span className="text-accent">
               UX/UI Engineer
             </span>
