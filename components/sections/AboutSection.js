@@ -37,6 +37,35 @@ import CountUp from "react-countup";
 // DATA
 // ---------------------------------------
 export const aboutData = [
+    {
+    title: "work experience",
+    info: [
+      {
+        title: "UI/UX Engineer - Axienta (Pvt) Ltd",
+        stage: "NOV 2025 - Present",
+      },
+      {
+        title: "Associate UI/UX Engineer - Axienta (Pvt) Ltd",
+        stage: "NOV 2023 - NOV 2025",
+      },
+      {
+        title: "Web Developer, UI/UX Designer & Video Editor - Freelancer",
+        stage: "APR 2020 - Present",
+      },
+      {
+        title: "Digital Media & Web Editor - Siyakma Academy",
+        stage: "FEB 2023 - JAN 2024",
+      },
+      {
+        title: "Intern Software Engineer - Fixellit (PVT) LTD",
+        stage: "FEB 2023 - JUL 2023",
+      },
+      {
+        title: "Trainee - People's Bank RHO Badulla",
+        stage: "DEC 2017 - APR 2018",
+      },
+    ],
+  },
   {
     title: "skills",
     info: [
@@ -72,31 +101,6 @@ export const aboutData = [
           <SiAdobephotoshop key={"photoshop"} />,
           <SiCanva key={"canva"} />,
         ],
-      },
-    ],
-  },
-  {
-    title: "work experience",
-    info: [
-      {
-        title: "Associate UI/UX Engineer - Axienta (Pvt) Ltd",
-        stage: "NOV 2023 - Present",
-      },
-      {
-        title: "Web Developer, UI/UX Designer & Video Editor - Freelancer",
-        stage: "APR 2020 - Present",
-      },
-      {
-        title: "Digital Media & Web Editor - Siyakma Academy",
-        stage: "FEB 2023 - JAN 2024",
-      },
-      {
-        title: "Intern Software Engineer - Fixellit (PVT) LTD",
-        stage: "FEB 2023 - JUL 2023",
-      },
-      {
-        title: "Trainee - People's Bank RHO Badulla",
-        stage: "DEC 2017 - APR 2018",
       },
     ],
   },
@@ -177,7 +181,7 @@ const AboutSection = () => {
               {/* Experience */}
               <div className="relative flex-1 after:w-[1px] after:h-full after:bg-white/10 after:absolute after:top-0 after:right-0">
                 <div className="text-2xl xl:text-4xl font-extrabold text-accent mb-2">
-                  <CountUp start={0} end={4} duration={5} /> +
+                  <CountUp start={0} end={5} duration={5} /> +
                 </div>
                 <div className="text-xs uppercase tracking-[1px] max-w-[100px]">
                   Years of experience
