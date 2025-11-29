@@ -1,5 +1,8 @@
+"use client";
+
 import React, { useState } from "react";
-//  Icons
+
+// Icons
 import {
   FaHtml5,
   FaCss3,
@@ -9,26 +12,30 @@ import {
   FaFigma,
   FaPhp,
 } from "react-icons/fa";
+
 import {
   SiNextdotjs,
-  SiAdobexd,
   SiAdobephotoshop,
   SiMysql,
   SiAdobepremierepro,
   SiCanva,
 } from "react-icons/si";
+
 // Components
-import Avatar from "../../components/Avatar";
-import Circles from "../../components/Circles";
-// Framer motion
+import Avatar from "./../Avatar";
+import Circles from "../Circles";
+import ParticlesContainer from "./../ParticlesContainer";
+
+// Framer Motion
 import { motion } from "framer-motion";
 import { fadeIn } from "../../variants";
+
 // Counter
 import CountUp from "react-countup";
-// ParticlesContainer
-import ParticlesContainer from "../../components/ParticlesContainer";
 
-//  Data
+// ---------------------------------------
+// DATA
+// ---------------------------------------
 export const aboutData = [
   {
     title: "skills",
@@ -80,7 +87,7 @@ export const aboutData = [
         stage: "APR 2020 - Present",
       },
       {
-        title: " Digital Media & Web Editor - Siyakma Academy",
+        title: "Digital Media & Web Editor - Siyakma Academy",
         stage: "FEB 2023 - JAN 2024",
       },
       {
@@ -113,26 +120,22 @@ export const aboutData = [
   },
 ];
 
-const About = () => {
+// ---------------------------------------
+// COMPONENT
+// ---------------------------------------
+
+const AboutSection = () => {
   const [index, setIndex] = useState(0);
-  console.log(index);
+
   return (
-    <div className="h-full bg-primary/32 py-32 text-center xl:text-left lg:overflow-hidden lg:h-screen mx-auto overflow-hidden">
+    <section
+      id="about"
+      className="h-full bg-primary/30 py-32 text-center xl:text-left lg:overflow-hidden lg:h-screen mx-auto overflow-hidden"
+    >
       <Circles />
-      {/* Particles */}
-      {/* <ParticlesContainer /> */}
-      {/* Avatar image */}
-      {/* <motion.div
-        variants={fadeIn("right", 0.2)}
-        initial="hidden"
-        animate="show"
-        exit="hidden"
-        className="hidden xl:flex absolute bottom-0 -left-[370px]"
-      >
-        <Avatar />
-      </motion.div> */}
+
       <div className="container mx-auto flex flex-col items-center xl:flex-row gap-x-6">
-        {/* Text */}
+        {/* ---------- LEFT TEXT SIDE ---------- */}
         <div className="flex-1 flex flex-col justify-center">
           <motion.h2
             variants={fadeIn("right", 0.2)}
@@ -144,6 +147,7 @@ const About = () => {
             I&apos;m not perfect but I&apos;m a{" "}
             <span className="text-accent">Limited Edition</span>
           </motion.h2>
+
           <motion.p
             variants={fadeIn("right", 0.4)}
             initial="hidden"
@@ -157,11 +161,11 @@ const About = () => {
             Engineering. As a passionate UI/UX enthusiast, I love developing
             front-end applications and designing intuitive, aesthetic interfaces
             with a keen eye for colors and visual balance. Through freelancing,
-            I've had the opportunity to work with clients worldwide from the US,
-            UK, Brazil, Australia, Hong Kong, and Japan, creating impactful
-            digital experiences that blend creativity and functionality.
+            I've worked with clients worldwide — including the US, UK, Brazil,
+            Australia, Hong Kong, and Japan.
           </motion.p>
-          {/* Counters */}
+
+          {/* ---------- COUNTERS ---------- */}
           <motion.div
             variants={fadeIn("right", 0.6)}
             initial="hidden"
@@ -175,32 +179,35 @@ const About = () => {
                 <div className="text-2xl xl:text-4xl font-extrabold text-accent mb-2">
                   <CountUp start={0} end={4} duration={5} /> +
                 </div>
-                <div className="text-xs uppercase tracking-[1px] loading-[1.4] max-w-[100px]">
+                <div className="text-xs uppercase tracking-[1px] max-w-[100px]">
                   Years of experience
                 </div>
               </div>
-              {/* Clients */}
+
+              {/* Satisfied clients */}
               <div className="relative flex-1 after:w-[1px] after:h-full after:bg-white/10 after:absolute after:top-0 after:right-0">
                 <div className="text-2xl xl:text-4xl font-extrabold text-accent mb-2">
                   <CountUp start={0} end={10} duration={5} /> +
                 </div>
-                <div className="text-xs uppercase tracking-[1px] loading-[1.4] max-w-[100px]">
+                <div className="text-xs uppercase tracking-[1px] max-w-[100px]">
                   Satisfied clients
                 </div>
               </div>
+
               {/* Projects */}
               <div className="relative flex-1">
                 <div className="text-2xl xl:text-4xl font-extrabold text-accent mb-2">
                   <CountUp start={0} end={40} duration={5} /> +
                 </div>
-                <div className="text-xs uppercase tracking-[1px] loading-[1.4] max-w-[100px]">
+                <div className="text-xs uppercase tracking-[1px] max-w-[100px]">
                   Finished projects
                 </div>
               </div>
             </div>
           </motion.div>
         </div>
-        {/* Info */}
+
+        {/* ---------- RIGHT INFO TABS ---------- */}
         <motion.div
           variants={fadeIn("left", 0.4)}
           initial="hidden"
@@ -208,53 +215,52 @@ const About = () => {
           exit="hidden"
           className="flex flex-col w-full xl:max-w-[48%] h-[530px]"
         >
+          {/* Tabs */}
           <div className="flex gap-x-4 xl:gap-x-8 mx-auto xl:mx-0 mb-4">
-            {aboutData.map((item, itemIndex) => {
-              return (
-                <div
-                  key={itemIndex}
-                  className={`${
-                    index === itemIndex &&
-                    "text-accent after:w-[100%] after:bg-accent after:transition-all after:duration-300"
-                  } cursor-pointer capitalize xl:text-lg relative after:w-8 after:h-[2px] after:bg-white after:absolute after:-bottom-1 after:left-0`}
-                  onClick={() => setIndex(itemIndex)}
-                >
+            {aboutData.map((item, itemIndex) => (
+              <div
+                key={itemIndex}
+                className={`${
+                  index === itemIndex &&
+                  "text-accent after:w-[100%] after:bg-accent after:transition-all after:duration-300"
+                } cursor-pointer capitalize xl:text-lg relative 
+                  after:w-8 after:h-[2px] after:bg-white after:absolute after:-bottom-1 after:left-0`}
+                onClick={() => setIndex(itemIndex)}
+              >
+                {item.title}
+              </div>
+            ))}
+          </div>
+
+          {/* Tab Content */}
+          <div className="py-2 xl:py-6 flex flex-col gap-y-2 xl:gap-y-4 items-center xl:items-start">
+            {aboutData[index].info.map((item, itemIndex) => (
+              <div
+                key={itemIndex}
+                className="flex-1 flex flex-col md:flex-row max-w-max gap-x-2 items-center text-white/60"
+              >
+                <div className="text-sm font-light mb-2 md:mb-0">
                   {item.title}
                 </div>
-              );
-            })}
-          </div>
-          <div className="py-2 xl:py-6 flex flex-col gap-y-2 xl:gap-y-4 items-center xl:items-start">
-            {aboutData[index].info.map((item, itemIndex) => {
-              return (
-                <div
-                  key={itemIndex}
-                  className="flex-1 flex flex-col md:flex-row max-w-max gap-x-2 items-center text-white/60"
-                >
-                  {/* Title */}
-                  <div className="text-sm font-light mb-2 md:mb-0">
-                    {item.title}
-                  </div>
-                  <div className="text-xs hidden md:flex">:</div>
-                  <div className="text-xs">{item.stage}</div>
-                  <div className="flex gap-x-4">
-                    {/* Icons */}
-                    {item.icons?.map((icon, itemIndex) => {
-                      return (
-                        <div key={itemIndex} className="text-2xl text-white">
-                          {icon}
-                        </div>
-                      );
-                    })}
-                  </div>
+
+                {item.stage && <div className="text-xs hidden md:flex">:</div>}
+                <div className="text-xs">{item.stage}</div>
+
+                {/* Skill Icons */}
+                <div className="flex gap-x-4">
+                  {item.icons?.map((icon, i) => (
+                    <div key={i} className="text-2xl text-white">
+                      {icon}
+                    </div>
+                  ))}
                 </div>
-              );
-            })}
+              </div>
+            ))}
           </div>
         </motion.div>
       </div>
-    </div>
+    </section>
   );
 };
 
-export default About;
+export default AboutSection;

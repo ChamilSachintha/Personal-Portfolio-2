@@ -1,28 +1,28 @@
+"use client";
+
+import { useState } from "react";
+
 // Components
-import Circles from "/components/Circles";
+import Circles from "../Circles";
 
 // Icons
 import { BsArrowRight } from "react-icons/bs";
 
-// Framer
+// Framer Motion
 import { motion } from "framer-motion";
-
-// Variants
 import { fadeIn } from "../../variants";
-import { useState } from "react"; // Import useState
 
-const Contact = () => {
-  // Create state variables for form fields
+const ContactSection = () => {
+  // State variables
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [subject, setSubject] = useState("");
   const [message, setMessage] = useState("");
 
-  // Function to handle form submission
+  // Form submit handler
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    // Create an object with the form data
     const formData = {
       name,
       email,
@@ -31,7 +31,6 @@ const Contact = () => {
     };
 
     try {
-      // Make an HTTP POST request to your Pipedream webhook URL
       const response = await fetch("https://eo2bcmpwcxokod3.m.pipedream.net", {
         method: "POST",
         headers: {
@@ -41,10 +40,14 @@ const Contact = () => {
       });
 
       if (response.ok) {
-        // Submission successful, you can show a success message or redirect
         alert("Form submitted successfully!");
+
+        // Clear fields
+        setName("");
+        setEmail("");
+        setSubject("");
+        setMessage("");
       } else {
-        // Submission failed, handle the error
         alert("Form submission failed. Please try again later.");
       }
     } catch (error) {
@@ -53,74 +56,88 @@ const Contact = () => {
   };
 
   return (
-    <div className="h-full bg-primary/30">
-      <div className="container mx-auto py-32 text-center xl:text-left flex items-center justify-center h-full">
-        {/* Text and form */}
-        <div className="flex flex-col w-full max-w-[700px]">
-          {/* Text */}
+    <section
+      id="contact"
+      className="min-h-screen bg-primary/30 flex items-center"
+    >
+      <div className="container mx-auto py-32 text-center xl:text-left flex items-center justify-center h-full relative">
+        {/* Background Circles */}
+        {/* <Circles /> */}
+
+        {/* Content */}
+        <div className="flex flex-col w-full max-w-[700px] relative z-10">
+          {/* Heading */}
           <motion.h2
             variants={fadeIn("up", 0.2)}
             initial="hidden"
-            animate="show"
-            exit="hidden"
+            whileInView="show"
+            viewport={{ once: true, amount: 0.3 }}
             className="h2 text-center mb-12 text-[45px]"
           >
             Let&apos;s <span className="text-accent">connect.</span>
           </motion.h2>
+
           {/* Form */}
-          <form
-            onSubmit={handleSubmit} // Handle form submission
+          <motion.form
+            onSubmit={handleSubmit}
             variants={fadeIn("up", 0.4)}
             initial="hidden"
-            animate="show"
-            exit="hidden"
-            className="flex-1 flex flex-col gap-6 w-full mx-auto"
+            whileInView="show"
+            viewport={{ once: true, amount: 0.3 }}
+            className="flex flex-col gap-6 w-full mx-auto"
           >
-            {/* Input group */}
+            {/* Name + Email */}
             <div className="flex gap-x-6 w-full">
               <input
                 type="text"
                 placeholder="Name"
                 className="input"
-                value={name} // Bind the input value to the state
-                onChange={(e) => setName(e.target.value)} // Update the state on input change
+                value={name}
+                onChange={(e) => setName(e.target.value)}
                 required
               />
+
               <input
                 type="email"
                 placeholder="Email"
                 className="input"
-                value={email} // Bind the input value to the state
-                onChange={(e) => setEmail(e.target.value)} // Update the state on input change
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
                 required
               />
             </div>
+
+            {/* Subject */}
             <input
               type="text"
               placeholder="Subject"
               className="input"
-              value={subject} // Bind the input value to the state
-              onChange={(e) => setSubject(e.target.value)} // Update the state on input change
+              value={subject}
+              onChange={(e) => setSubject(e.target.value)}
               required
             />
+
+            {/* Message */}
             <textarea
               placeholder="Message"
               className="textarea"
-              value={message} // Bind the input value to the state
-              onChange={(e) => setMessage(e.target.value)} // Update the state on input change
+              value={message}
+              onChange={(e) => setMessage(e.target.value)}
               required
             ></textarea>
-            <button className="btn rounded-full border border-white/50 max-w-[170px] px-8 transition-all duration-300 flex items-center justify-center overflow-hidden hover:border-accent group">
+
+            {/* Button */}
+            <button className="btn rounded-full border border-white/50 max-w-[170px] px-8 transition-all duration-300 flex items-center justify-center overflow-hidden hover:border-accent group relative">
               <span className="group-hover:-translate-y-[120%] group-hover:opacity-0 transition-all duration-500">
                 Let&apos;s talk
               </span>
-              <BsArrowRight className="-translate-y-[120%] opacity-0 group-hover:flex group-hover:-translate-y-0 group-hover:opacity-100 transition-all duration-300 absolute text-[22px]" />
+              <BsArrowRight className="-translate-y-[120%] opacity-0 group-hover:-translate-y-0 group-hover:opacity-100 transition-all duration-300 absolute text-[22px]" />
             </button>
-          </form>
+          </motion.form>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 
-export default Contact;
+export default ContactSection;
