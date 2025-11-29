@@ -41,10 +41,15 @@ export const workSlider = {
           path: "/thumb6.png",
           link: "https://personal-portfolio1-sooty.vercel.app/",
         },
-        {
-          title: "Siyakma Academy",
-          path: "/thumb7.png",
-          link: "https://siyakmaacademy.com/",
+        // {
+        //   title: "Siyakma Academy",
+        //   path: "/thumb7.png",
+        //   link: "https://siyakmaacademy.com/",
+        // },
+          {
+          title: "Transcription AI Dashboard",
+          path: "/thumb7_new.png",
+          link: "https://transcription-ai-dashboard.vercel.app/",
         },
       ],
     },
