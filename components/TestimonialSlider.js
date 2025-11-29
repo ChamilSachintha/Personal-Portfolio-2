@@ -32,7 +32,7 @@ export const testimonialSlider = [
   {
     image: "/client_vasile96.jpg",
     name: "vasile96",
-    position: "Customer",
+    position: "Client",
     country: "UK",
     icon: <Flag country="GB" key={"uk"} />,
     message:
@@ -41,7 +41,7 @@ export const testimonialSlider = [
   {
     image: "/client_familiaoffice.jpg",
     name: "familiaoffice",
-    position: "Customer",
+    position: "Client",
     country: "Japan",
     icon: <Flag country="JP" key={"japan"} />,
     message:
@@ -50,7 +50,7 @@ export const testimonialSlider = [
   {
     image: "/client_hussain629.jpg",
     name: "hussain629",
-    position: "Customer",
+    position: "Client",
     country: "Hong Kong",
     icon: <Flag country="HK" key={"hong kong"} />,
     message: '"Good and fast work bro delivery on time thank you so much"',
@@ -58,7 +58,7 @@ export const testimonialSlider = [
   {
     image: "/client_sergiosombrao.jpg",
     name: "sergiosombrao",
-    position: "Customer",
+    position: "Client",
     country: "Brazil",
     icon: <Flag country="BR" key={"brazil"} />,
     message: '"Very good and fast job 5star"',
@@ -66,7 +66,7 @@ export const testimonialSlider = [
   {
     image: "/client_cannoneye.jpg",
     name: "cannoneye",
-    position: "Customer",
+    position: "Client",
     country: "Australia",
     icon: <Flag country="AU" key={"australia"} />,
     message:
@@ -75,7 +75,7 @@ export const testimonialSlider = [
   {
     image: "/client_entzibasllari.jpg",
     name: "entzibasllari",
-    position: "Customer",
+    position: "Client",
     country: "UK",
     icon: <Flag country="GB" key={"uk"} />,
     message: '"The best."',
@@ -93,7 +93,7 @@ export const testimonialSlider = [
   {
     image: "/client_DineshPiyasamara.jpg",
     name: "Dinesh Piyasamara",
-    position: "Content Creator | Intern Software Engineer",
+    position: "AI/ML Engineer | BSc(Hons) Engineering",
     country: "Sri Lanka",
     icon: <Flag country="LK" key={"sri lanka"} />,
     message:
