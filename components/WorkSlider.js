@@ -23,37 +23,7 @@ import Link from "next/link";
 
 export const workSlider = {
   slides: [
-    {
-      type: "front-end",
-      images: [
         {
-          title: "IT Company Website",
-          path: "/thumb5_new.png",
-          link: "https://it-company-website-ruddy.vercel.app/",
-        },
-        {
-          title: "Student Progress Viewer",
-          path: "/thumb8.png",
-          link: "https://student-progress-viewer.vercel.app/",
-        },
-        {
-          title: "Personal Portfolio",
-          path: "/thumb6.png",
-          link: "https://personal-portfolio1-sooty.vercel.app/",
-        },
-        // {
-        //   title: "Siyakma Academy",
-        //   path: "/thumb7.png",
-        //   link: "https://siyakmaacademy.com/",
-        // },
-          {
-          title: "Transcription AI Dashboard",
-          path: "/thumb7_new.png",
-          link: "https://transcription-ai-dashboard.vercel.app/",
-        },
-      ],
-    },
-    {
       type: "UI/UX",
       images: [
         {
@@ -92,6 +62,36 @@ export const workSlider = {
           title: "Academic Calendar UI",
           path: "/thumb15.png",
           link: "https://www.behance.net/gallery/179137501/Academic-Calendar-UI-Design",
+        },
+      ],
+    },
+    {
+      type: "front-end",
+      images: [
+        {
+          title: "IT Company Website",
+          path: "/thumb5_new.png",
+          link: "https://it-company-website-ruddy.vercel.app/",
+        },
+        {
+          title: "Student Progress Viewer",
+          path: "/thumb8.png",
+          link: "https://student-progress-viewer.vercel.app/",
+        },
+        {
+          title: "Personal Portfolio",
+          path: "/thumb6.png",
+          link: "https://personal-portfolio1-sooty.vercel.app/",
+        },
+        // {
+        //   title: "Siyakma Academy",
+        //   path: "/thumb7.png",
+        //   link: "https://siyakmaacademy.com/",
+        // },
+          {
+          title: "Transcription AI Dashboard",
+          path: "/thumb7_new.png",
+          link: "https://transcription-ai-dashboard.vercel.app/",
         },
       ],
     },

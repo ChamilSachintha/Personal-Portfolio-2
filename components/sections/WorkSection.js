@@ -22,7 +22,6 @@ const WorkSection = () => {
 
       <div className="container mx-auto">
         <div className="flex flex-col items-center text-center">
-
           {/* ---------- TITLE ---------- */}
           <motion.h2
             variants={fadeIn("up", 0.2)}
@@ -41,7 +40,8 @@ const WorkSection = () => {
             viewport={{ once: true, amount: 0.3 }}
             className="mb-20 text-white/70"
           >
-            “ Every project is an opportunity to learn, figure out problems and challenges, and invent and reinvent. ”
+            “ Every project is an opportunity to learn, figure out problems and
+            challenges, and invent and reinvent. ”
           </motion.p>
 
           {/* ---------- TABS ---------- */}
@@ -53,18 +53,6 @@ const WorkSection = () => {
             className="w-full flex justify-center mb-8 space-x-10"
           >
             <button
-              onClick={() => setActiveTab("front-end")}
-              className={`flex items-center gap-x-2 tab-btn ${
-                activeTab === "front-end"
-                  ? "text-accent font-semibold"
-                  : "text-white/60"
-              }`}
-            >
-              <RxLayout />
-              Front-End
-            </button>
-
-            <button
               onClick={() => setActiveTab("UI/UX")}
               className={`flex items-center gap-x-2 tab-btn ${
                 activeTab === "UI/UX"
@@ -75,7 +63,17 @@ const WorkSection = () => {
               <RxMix />
               UI / UX
             </button>
-
+            <button
+              onClick={() => setActiveTab("front-end")}
+              className={`flex items-center gap-x-2 tab-btn ${
+                activeTab === "front-end"
+                  ? "text-accent font-semibold"
+                  : "text-white/60"
+              }`}
+            >
+              <RxLayout />
+              Front-End
+            </button>
             <button
               onClick={() => setActiveTab("full-stack")}
               className={`flex items-center gap-x-2 tab-btn ${
@@ -99,7 +97,6 @@ const WorkSection = () => {
           >
             <ProjectSlider activeTab={activeTab} />
           </motion.div>
-
         </div>
       </div>
 
