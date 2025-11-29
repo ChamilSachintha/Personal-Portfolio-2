@@ -14,6 +14,8 @@ const HeroSection = () => {
     <section className="bg-primary/60 overflow-hidden h-screen relative">
       {/* Background gradient overlay */}
       <div className="w-full h-full bg-gradient-to-r from-primary/10 via-black/30 to-black/10 mx-auto">
+        {/* Particles */}
+        <ParticlesContainer />
         <div className="text-center flex flex-col justify-center xl:pt-40 xl:text-left h-full container mx-auto">
           {/* Heading */}
           <motion.h1
@@ -59,8 +61,7 @@ const HeroSection = () => {
         {/* Background image overlay */}
         <div className="bg-none xl:bg-explosion xl:bg-cover xl:bg-right xl:bg-no-repeat w-full h-full absolute mix-blend-color-dodge translate-z-0"></div>
 
-        {/* Particles */}
-        <ParticlesContainer />
+       
 
         {/* Avatar */}
         <motion.div
