@@ -27,9 +27,9 @@ export const workSlider = {
       type: "front-end",
       images: [
         {
-          title: "Welpalla Signature",
-          path: "/thumb5.png",
-          link: "https://welpalla-signature.com/",
+          title: "IT Company Website",
+          path: "/thumb5_new.png",
+          link: "https://it-company-website-ruddy.vercel.app/",
         },
         {
           title: "Student Progress Viewer",
