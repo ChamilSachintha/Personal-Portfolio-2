@@ -66,7 +66,7 @@ const HeroSection = () => {
           initial="hidden"
           animate="show"
           exit="hidden"
-          className="w-full h-full max-w-[630px] max-h-[678px] absolute lg:bottom-[-80px] lg:right-[4%] sm:right-[-12%] bottom-[-35%] right-[-14%]"
+          className="w-full h-full max-w-[630px] max-h-[678px] absolute lg:bottom-[-80px] lg:right-[4%] sm:right-[-12%] bottom-[-35%] right-[-14%] md:bottom-[12%]"
         >
           <Avatar />
         </motion.div>
