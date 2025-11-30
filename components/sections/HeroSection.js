@@ -37,7 +37,7 @@ const HeroSection = () => {
             exit="hidden"
             className="max-w-sm xl:max-w-xl mx-auto xl:mx-0 mb-10 xl:mb-16"
           >
-            I am passionate about developing Front-end applications and designing UI/UX with a keen eye for colors and aesthetics.
+            I design & implement pixel-perfect interfaces, turn ideas into intuitive products, simplify complexity, translate problems into elegant solutions, & improve usability to help businesses convert better.
           </motion.p>
 
           {/* Button */}
