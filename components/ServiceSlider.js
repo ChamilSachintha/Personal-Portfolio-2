@@ -17,17 +17,17 @@ import Link from "next/link";
 
 // Service data
 export const serviceData = [
+    {
+    icon: <RxMix />,
+    title: "UI / UX",
+    description:
+      "Designing intuitive, user-friendly interfaces that enhance usability and create seamless experiences.",
+  },
   {
     icon: <RxLaptop />,
     title: "Front-End",
     description:
       "Transforming design concepts into interactive and user-friendly interfaces that captivate and engage users.",
-  },
-  {
-    icon: <RxMix />,
-    title: "UI / UX",
-    description:
-      "Designing intuitive, user-friendly interfaces that enhance usability and create seamless experiences.",
   },
   {
     icon: <RxVideo />,
