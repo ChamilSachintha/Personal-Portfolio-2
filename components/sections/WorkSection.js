@@ -11,7 +11,7 @@ import Circles from "../Circles";
 import { RxLayout, RxLayers, RxMix } from "react-icons/rx";
 
 const WorkSection = () => {
-  const [activeTab, setActiveTab] = useState("front-end");
+  const [activeTab, setActiveTab] = useState("UI/UX");
 
   return (
     <section
