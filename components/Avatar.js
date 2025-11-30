@@ -2,13 +2,13 @@ import Image from "next/image"; // Next image
 
 const Avatar = () => {
   return (
-    <div className="hidden xl:flex xl:max-w-none">
+    <div className="flex justify-center items-center xl:block xl:max-w-none">
       <Image
         src={"/avatar.webp"}
         width={737}
         height={678}
         alt=""
-        className="translate-z-0 w-full h-full"
+        className="translate-z-0 w-[250px] sm:w-[300px] md:w-[350px] h-auto xl:w-full"
       />
     </div>
   );

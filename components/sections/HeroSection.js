@@ -59,17 +59,14 @@ const HeroSection = () => {
       {/* Right-side Image / Avatar */}
       <div className="w-[1200px] h-full absolute right-0 bottom-0">
         {/* Background image overlay */}
-        <div className="bg-none xl:bg-explosion xl:bg-cover xl:bg-right xl:bg-no-repeat w-full h-full absolute mix-blend-color-dodge translate-z-0"></div>
-
-       
-
+        <div className="bg-explosion xl:bg-cover xl:bg-right xl:bg-no-repeat w-full h-full absolute mix-blend-color-dodge translate-z-0"></div>
         {/* Avatar */}
         <motion.div
           variants={fadeIn("up", 0.5)}
           initial="hidden"
           animate="show"
           exit="hidden"
-          className="w-full h-full max-w-[630px] max-h-[678px] absolute -bottom-20 lg:right-[4%]"
+          className="w-full h-full max-w-[630px] max-h-[678px] absolute lg:bottom-[-80px] md:bottom-[-6%] sm:bottom-[-11%] lg:right-[4%] sm:right-[-12%] bottom-[-15%] right-[-11%]"
         >
           <Avatar />
         </motion.div>
