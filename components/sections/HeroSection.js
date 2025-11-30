@@ -23,7 +23,7 @@ const HeroSection = () => {
             initial="hidden"
             animate="show"
             exit="hidden"
-            className="h1 lg:text-[45px] text-[32px]"
+            className="h1 lg:text-[45px] text-[28px] md:text-[32px]"
           >
             Hi, I&apos;m Chamil Sachintha <br />{" "}
             <span className="text-accent">UX/UI Engineer</span>
