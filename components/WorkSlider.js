@@ -23,7 +23,7 @@ import Link from "next/link";
 
 export const workSlider = {
   slides: [
-        {
+    {
       type: "UI/UX",
       images: [
         {
@@ -63,6 +63,11 @@ export const workSlider = {
           path: "/thumb15.png",
           link: "https://www.behance.net/gallery/179137501/Academic-Calendar-UI-Design",
         },
+        {
+          title: "Spicy Website Landing Page",
+          path: "/thumb29.png",
+          link: "https://www.behance.net/gallery/221117953/Spicy-Website-Landing-Page",
+        },
       ],
     },
     {
@@ -88,7 +93,7 @@ export const workSlider = {
         //   path: "/thumb7.png",
         //   link: "https://siyakmaacademy.com/",
         // },
-          {
+        {
           title: "Transcription AI Dashboard",
           path: "/thumb7_new.png",
           link: "https://transcription-ai-dashboard.vercel.app/",
@@ -153,6 +158,11 @@ export const workSlider = {
           path: "/thumb27.png",
           link: "https://www.behance.net/gallery/207321029/Ragnar-Lothbrok-Digital-Art",
         },
+          {
+          title: "Farewell Post Design",
+          path: "/thumb30.png",
+          link: "https://www.behance.net/gallery/239554005/Farewell-Post",
+        },
       ],
     },
   ],
@@ -164,54 +174,52 @@ const WorkSlider = ({ activeTab }) => {
   );
 
   return (
-<Swiper
-  spaceBetween={10}
-  navigation={true}
-  pagination={{ clickable: true }}
-  modules={[Navigation, Pagination]}
-  className=""
->
-  {filteredSlides.map((slide, index) => {
-    return (
-      <SwiperSlide key={index}>
-        <div className="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-4 cursor-pointer">
-          {slide.images.map((image, index) => {
-            return (
-              <Link key={index} href={`${image.link}`} target="_blank">
-                <div className="relative rounded-lg overflow-hidden flex items-center justify-center group">
-                  <div className="flex items-center justify-center relative overflow-hidden group">
-                    <Image
-                      src={image.path}
-                      width={500}
-                      height={300}
-                      alt={image.title}
-                    />
+    <Swiper
+      spaceBetween={10}
+      navigation={true}
+      pagination={{ clickable: true }}
+      modules={[Navigation, Pagination]}
+      className=""
+    >
+      {filteredSlides.map((slide, index) => {
+        return (
+          <SwiperSlide key={index}>
+            <div className="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-4 cursor-pointer">
+              {slide.images.map((image, index) => {
+                return (
+                  <Link key={index} href={`${image.link}`} target="_blank">
+                    <div className="relative rounded-lg overflow-hidden flex items-center justify-center group">
+                      <div className="flex items-center justify-center relative overflow-hidden group">
+                        <Image
+                          src={image.path}
+                          width={500}
+                          height={300}
+                          alt={image.title}
+                        />
 
-                    <div className="absolute inset-0 bg-gradient-to-l from-transparent via-[#e838cc] to-[#4a22bd] opacity-0 group-hover:opacity-80 transition-all duration-700"></div>
+                        <div className="absolute inset-0 bg-gradient-to-l from-transparent via-[#e838cc] to-[#4a22bd] opacity-0 group-hover:opacity-80 transition-all duration-700"></div>
 
-                    <div className="absolute bottom-0 translate-y-full group-hover:-translate-y-10 group-hover:xl:-translate-y-20 transition-all duration-300">
-                      <div className="flex items-center gap-x-2 text-[13px] tracking-[0.2em]">
-                        <div className="delay-100 drop-shadow-md">LIVE</div>
-                        <div className="translate-y-[500%] group-hover:translate-y-0 transition-all duration-300 delay-150 drop-shadow-md">
-                          PROJECT
-                        </div>
-                        <div className="text-xl translate-y-[500%] group-hover:translate-y-0 transition-all duration-300 delay-200 drop-shadow-md">
-                          <BsArrowRight />
+                        <div className="absolute bottom-0 translate-y-full group-hover:-translate-y-10 group-hover:xl:-translate-y-20 transition-all duration-300">
+                          <div className="flex items-center gap-x-2 text-[13px] tracking-[0.2em]">
+                            <div className="delay-100 drop-shadow-md">LIVE</div>
+                            <div className="translate-y-[500%] group-hover:translate-y-0 transition-all duration-300 delay-150 drop-shadow-md">
+                              PROJECT
+                            </div>
+                            <div className="text-xl translate-y-[500%] group-hover:translate-y-0 transition-all duration-300 delay-200 drop-shadow-md">
+                              <BsArrowRight />
+                            </div>
+                          </div>
                         </div>
                       </div>
                     </div>
-
-                  </div>
-                </div>
-              </Link>
-            );
-          })}
-        </div>
-      </SwiperSlide>
-    );
-  })}
-</Swiper>
-
+                  </Link>
+                );
+              })}
+            </div>
+          </SwiperSlide>
+        );
+      })}
+    </Swiper>
   );
 };
 
