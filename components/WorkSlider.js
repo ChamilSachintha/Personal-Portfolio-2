@@ -96,12 +96,62 @@ export const workSlider = {
       ],
     },
     {
-      type: "full-stack",
+      type: "graphic-design",
       images: [
         {
-          title: "Pharmacy Management System",
-          path: "/thumb16.png",
-          link: "https://github.com/ChamilSachintha/Pharmacy-Management-System",
+          title: "Thomas Shelby Digital Art",
+          path: "/thumb17.png",
+          link: "https://www.behance.net/gallery/207319993/Thomas-Shelby-Digital-Art",
+        },
+        {
+          title: "Sergio Ramos Digital Art",
+          path: "/thumb18.png",
+          link: "https://www.behance.net/gallery/207320751/Sergio-Ramos-Digital-Art",
+        },
+        {
+          title: "Daenerys Targaryen Digital Art",
+          path: "/thumb19.png",
+          link: "https://www.behance.net/gallery/207321337/Daenerys-Targaryen-Digital-Art",
+        },
+        {
+          title: "Happy Sinhala and Tamil New Year Social Media Post",
+          path: "/thumb20.png",
+          link: "https://www.behance.net/gallery/211659301/Happy-Sinhala-and-Tamil-New-Year",
+        },
+        {
+          title: "David Beckham Digital Art",
+          path: "/thumb21.png",
+          link: "https://www.behance.net/gallery/207374503/David-Beckham-Digital-Art",
+        },
+        {
+          title: "Sinhala and Tamil New Year Social Media Post",
+          path: "/thumb22.png",
+          link: "https://www.behance.net/gallery/211658791/Sinhala-and-Tamil-New-Year-Social-Media-Post",
+        },
+        {
+          title: "Future female scientist holding a fictional sand clock",
+          path: "/thumb23.png",
+          link: "https://www.behance.net/gallery/207373955/Future-female-scientist-holding-a-fictional-sand-clock",
+        },
+        {
+          title: "Beautiful Girl Digital Art",
+          path: "/thumb24.png",
+          link: "https://www.behance.net/gallery/207357501/Beautiful-Girl-Digital-Art",
+        },
+        {
+          title: "Michael Scofield Digital Art",
+          path: "/thumb25.png",
+          link: "https://www.behance.net/gallery/207357309/Michael-Scofield-Digital-Art",
+        },
+        {
+          title: "Pretty Lady Digital Art",
+          path: "/thumb26.png",
+          link: "https://www.behance.net/gallery/207321637/Pretty-Lady-Digital-Art",
+        },
+        {
+          title: "Ragnar Lothbrok Digital Art",
+          path: "/thumb27.png",
+          link: "https://www.behance.net/gallery/207321029/Ragnar-Lothbrok-Digital-Art",
         },
       ],
     },

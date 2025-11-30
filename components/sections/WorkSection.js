@@ -75,15 +75,15 @@ const WorkSection = () => {
               Front-End
             </button>
             <button
-              onClick={() => setActiveTab("full-stack")}
+              onClick={() => setActiveTab("graphic-design")}
               className={`flex items-center gap-x-2 tab-btn ${
-                activeTab === "full-stack"
+                activeTab === "graphic-design"
                   ? "text-accent font-semibold"
                   : "text-white/60"
               }`}
             >
               <RxLayers />
-              Full-Stack
+              Graphic Design
             </button>
           </motion.div>
 
