@@ -37,7 +37,7 @@ import CountUp from "react-countup";
 // DATA
 // ---------------------------------------
 export const aboutData = [
-    {
+  {
     title: "work experience",
     info: [
       {
@@ -217,7 +217,7 @@ const AboutSection = () => {
           initial="hidden"
           animate="show"
           exit="hidden"
-          className="flex flex-col w-full xl:max-w-[48%] h-[530px]"
+          className="flex flex-col w-full xl:max-w-[48%] h-[530px] px-[20px] md:px-0"
         >
           {/* Tabs */}
           <div className="flex gap-x-4 xl:gap-x-8 mx-auto xl:mx-0 mb-4">
@@ -237,13 +237,13 @@ const AboutSection = () => {
           </div>
 
           {/* Tab Content */}
-          <div className="py-2 xl:py-6 flex flex-col gap-y-2 xl:gap-y-4 items-center xl:items-start">
+          <div className="py-2 xl:py-6 flex flex-col gap-y-2 xl:gap-y-4 items-start xl:items-start text-left">
             {aboutData[index].info.map((item, itemIndex) => (
               <div
                 key={itemIndex}
-                className="flex-1 flex flex-col md:flex-row max-w-max gap-x-2 items-center text-white/60"
+                className="flex-1 flex flex-col md:flex-row max-w-max gap-x-2 items-start text-white/60"
               >
-                <div className="text-sm font-light mb-2 md:mb-0">
+                <div className="text-sm font-light mb-1 md:mb-0">
                   {item.title}
                 </div>
 
@@ -251,7 +251,7 @@ const AboutSection = () => {
                 <div className="text-xs">{item.stage}</div>
 
                 {/* Skill Icons */}
-                <div className="flex gap-x-4">
+                <div className="flex gap-x-4 mt-2 md:mt-0">
                   {item.icons?.map((icon, i) => (
                     <div key={i} className="text-2xl text-white">
                       {icon}
