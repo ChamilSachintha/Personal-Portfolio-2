@@ -220,7 +220,7 @@ const AboutSection = () => {
           className="flex flex-col w-full xl:max-w-[48%] h-[530px] px-[20px] md:px-0"
         >
           {/* Tabs */}
-          <div className="flex gap-x-4 xl:gap-x-8 mx-auto xl:mx-0 mb-4">
+          <div className="flex gap-x-6 md:gap-x-4 xl:gap-x-8 mx-auto xl:mx-0 mb-4">
             {aboutData.map((item, itemIndex) => (
               <div
                 key={itemIndex}
